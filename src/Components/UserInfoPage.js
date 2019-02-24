@@ -7,7 +7,7 @@ export default class UserInfoPage extends Component {
         return (
             <div>
                 <Navbar />
-                <main>
+                <main className="maininfo">
                     <h2>User Info</h2>
                     <p>User has visited the following articles:</p>
                     <p>Temp display of articles tracked</p>
