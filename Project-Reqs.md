@@ -71,3 +71,5 @@ Building a project to meet requirements and share with team to display and expla
 * Which articles are viewed in full at the Engadget site
     - need to keep track of when the user clicks on any link to view the full article
 * Footer again
+
+add objects to an array. Each object takes name property with a string value for title of the article and a engagdet property with a boolean value to say whether the full article was visited
