@@ -66,6 +66,7 @@ header nav input {
   /* width: 100%; */
   margin: 50px auto 90px auto;
   border-bottom: solid 1px lightgray;
+  text-align: left;
 }
 
 .cards li img {
