@@ -13,7 +13,7 @@ export default class Cards extends Component {
                 </div> */}
                 <ul className="cards">
                     {articles.map( article => (
-                        <li key={article.publishedAt}>
+                        <li key={`${article.publishedAt}+`}>
                             <img src={article.urlToImage} alt=""/>
                             <p>Hashtag Temp</p>
                             <h2>{article.title}</h2>
