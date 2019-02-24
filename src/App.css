@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -30,4 +30,64 @@
   to {
     transform: rotate(360deg);
   }
+} */
+header nav {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  border-bottom: solid 1px lightgray;
+}
+
+header nav h1 {
+  align-content: flex-start;
+  font-size: 1.2rem;
+}
+
+header nav input {
+  margin-top: 15px;
+  max-height: 50px;
+  display: none;
+}
+
+.link {
+  margin-top: 20px;
+}
+
+.cards {
+  display: inline;
+}
+.cards li {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  max-width: 90%;
+  /* width: 100%; */
+  margin: 50px auto 90px auto;
+  border-bottom: solid 1px lightgray;
+}
+
+.cards li img {
+  width: 100%;
+  height: auto;
+}
+
+.maininfo {
+  padding-top: 50px;
+  max-width: 90%;
+}
+
+footer ul li {
+  display: inline-flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
+  list-style: none;
+}
+
+footer p {
+  display: block;
+  text-align: center;
 }
