@@ -22,7 +22,7 @@ Building a project to meet requirements and share with team to display and expla
 ## Breakdown
 
 ### Article list page:
-* Header/Nav 
+* Header/Nav
     - Logo/Home Link
     - search by hashtags 
     - sign up
