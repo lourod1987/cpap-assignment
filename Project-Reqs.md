@@ -65,7 +65,9 @@ Building a project to meet requirements and share with team to display and expla
 * Footer again
 
 ### Additional Page:
+* Header/Nav again
 * lists the articles the user has visited
     - need to keep track of each article title clicked on
 * Which articles are viewed in full at the Engadget site
     - need to keep track of when the user clicks on any link to view the full article
+* Footer again
