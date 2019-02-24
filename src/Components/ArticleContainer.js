@@ -4,25 +4,32 @@ import UserInfoPage from './UserInfoPage';
 import ArticlePage from './ArticlePage';
 import { Route } from 'react-router-dom';
 
-class ArticleContainer extends Component {
+export default class ArticleContainer extends Component {
+
   state = {
     article: {},
     articles: [],
+    i: 0,
     visited: []
     // url: '/'
   }
+
   componentDidMount() {
-      const apiKey = '2d2509aeb33d472da6f8f1cc4c4aa211';
-      // const spareUrl = `https://newsapi.org/v2/everything?q=tech&apiKey=${apiKey}`
-      fetch(`https://newsapi.org/v2/top-headlines?sources=engadget&apiKey=${apiKey}`)
-      .then(res => res.json())
-      .then(data => {
-          this.setState({
-              articles: data.articles
-          })
-          console.log(this.state.articles)
+    const apiKey = '2d2509aeb33d472da6f8f1cc4c4aa211';
+    // const spareUrl = `https://newsapi.org/v2/everything?q=tech&apiKey=${apiKey}`
+
+    fetch(`https://newsapi.org/v2/top-headlines?sources=engadget&apiKey=${apiKey}`)
+    .then(res => res.json())
+    .then(data => {
+      this.setState({
+        articles: data.articles
       })
+      console.log(this.state.articles)
+    });
+
+    setTimeout(()=>this.goToArticle(this.state.i), 300);
   }
+
   // generateUrl = (publisher, author, timestamp) => {
   //   const tempArr = author.split(' ');
   //   const newStr = tempArr.join('');
@@ -34,12 +41,17 @@ class ArticleContainer extends Component {
   //   })
   //   console.log("curr state: " + this.state.url)
   // }
+
   goToArticle = (index) => {
+    this.setState({
+      i: index
+    })
     this.setState( prevState => ({
-      article: Object.assign(prevState.article, this.state.articles[index])
+      article: Object.assign(prevState.article, this.state.articles[index]),
     }))
-    console.log(this.state.article)
+    console.log(this.state.i)
   }
+
   render() {
     const { article, articles, url } = this.state;
     return (
@@ -62,5 +74,3 @@ class ArticleContainer extends Component {
     );
   }
 }
-
-export default ArticleContainer;
