@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default class Cards extends Component {
   render() {
-    const { articles, generateUrl, url, goToArticle } = this.props;
+    const { articles, goToArticle } = this.props;
     return (
       <div>
         {/* <div>
