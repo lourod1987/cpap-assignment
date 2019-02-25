@@ -7,14 +7,9 @@ export default class Navbar extends Component {
       <header>
         <nav>
           <img src="" alt=""/>
-          <Link to="/"><h1>TechAgg</h1></Link>
-          <input type="text"  placeholder="Search"/>
+          <Link to="/" className="site-name"><h1>TechAgg</h1></Link>
+          {/* <input type="text"  placeholder="Search"/> */}
           <Link to="/userinfo" className="link">User Info</Link>
-          {/* <ul>
-              <li>Sign Up</li>
-              <li>Get the App</li>
-              <li>Log in</li>
-          </ul> */}
         </nav>
       </header>
     );
