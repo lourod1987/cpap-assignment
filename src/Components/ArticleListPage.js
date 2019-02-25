@@ -11,7 +11,6 @@ export default class ArticleListPage extends Component {
         <div>
             <Navbar />
             <Cards articles={articles} goToArticle={goToArticle} />
-            {/* <Cards articles={articles} generateUrl={generateUrl} url={url} /> */}
             <Footer />
         </div>
     );
