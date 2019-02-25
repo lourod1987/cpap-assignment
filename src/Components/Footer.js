@@ -15,7 +15,7 @@ export default class Footer extends Component {
           <li>Privacy Policy</li>
           <li>Sitemap</li>
         </ul>
-        <p>temp copyright link and name</p>
+        <p>&copy; TechAgg</p>
       </footer>
     );
   }
