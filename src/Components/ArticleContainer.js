@@ -10,8 +10,8 @@ export default class ArticleContainer extends Component {
     article: {},
     articles: [],
     i: 0,
-    visited: []
-    // url: '/'
+    visited: [],
+    viewedFull: []
   }
 
   componentDidMount() {
@@ -24,51 +24,70 @@ export default class ArticleContainer extends Component {
       this.setState({
         articles: data.articles
       })
-      console.log(this.state.articles)
+      // console.log(this.state.articles)
     });
 
-    setTimeout(()=>this.goToArticle(this.state.i), 300);
+    // setTimeout(()=>this.goToArticle(this.state.i), 300);
   }
 
-  // generateUrl = (publisher, author, timestamp) => {
-  //   const tempArr = author.split(' ');
-  //   const newStr = tempArr.join('');
-  //   // const combine = `/@${publisher}/${newStr}/${timestamp}`;
-  //   const combine = "/@" + publisher + "/" + newStr + "/" + timestamp;
-  //   console.log("combine val: " + combine)
-  //   this.setState({
-  //     url: combine
-  //   })
-  //   console.log("curr state: " + this.state.url)
-  // }
-
   goToArticle = (index) => {
+    this.setIndex(index);
+
+    let article = Object.assign({}, this.state.articles[index])
+    this.setState({
+      article 
+    });
+    // console.log("index val: " + index)
+    // setTimeout(() => console.log(this.state.article), 800)
+    this.visitedArticles(index);
+  }
+
+  setIndex = (index) => {
     this.setState({
       i: index
-    })
+    });
+    // setTimeout(() => console.log("i state val: " + this.state.i), 800)
+  }
+
+  visitedArticles = (index) => {
     this.setState( prevState => ({
-      article: Object.assign(prevState.article, this.state.articles[index]),
+      visited: [...prevState.visited, {
+        viewed: this.state.articles[index].title,
+      }]
     }))
-    console.log(this.state.i)
+    // console.log(this.state.visited)
+  }
+
+  fullArticle = (title) => {
+    this.setState( prevState => ({
+      viewedFull: [...prevState.viewedFull, {
+        fullArticle: title,
+      }]
+    }));
   }
 
   render() {
-    const { article, articles, url } = this.state;
+    const { article, articles, visited, viewedFull } = this.state;
     return (
       <div>
         <Route exact path="/" render={ () => (
           <ArticleListPage
             articles={articles}
             goToArticle={this.goToArticle}
-            // generateUrl={this.generateUrl}
-            // url={url}
           />
         )}/>
+          <Route exact path="/article" render={ () => (
+            <ArticlePage 
+              article={article} 
+              visited={visited} 
+              fullArticle={this.fullArticle} 
+            />
+          )}/>
         <Route exact path="/userinfo" render={ () => (
-          <UserInfoPage />
-        )}/>
-        <Route exact path="/article" render={ () => (
-          <ArticlePage article={article}/>
+          <UserInfoPage
+            visited={visited}
+            viewedFull={viewedFull}
+          />
         )}/>
       </div>
     );
