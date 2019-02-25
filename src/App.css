@@ -2,27 +2,72 @@
 ============================
 } */
 header nav {
+  display: grid;
+  grid-template-columns: 20px 2fr 1fr 20px;
+  width: 100%;
+  height: 100px;
+  /* position: fixed; */
+  background-color: white;
+  border-bottom: solid 1px lightgray;
+  margin-top: -20px;
+}
+
+/* header nav {
   display: inline-flex;
   justify-content: space-around;
+  /* min-height: 2rem;
   width: 100%;
   position: fixed;
   background-color: white;
   border-bottom: solid 1px lightgray;
-}
+} */
 
 header nav h1 {
-  align-content: flex-start;
+  /* align-content: flex-start; */
   font-size: 1.2rem;
+  text-align: center;
+  margin-top: 30px;
 }
 
-header nav input {
+.site-name {
+  text-decoration: none;
+}
+
+.site-name:visited {
+  color: black;
+}
+
+.site-name:hover {
+  color: red;
+}
+
+.site-name:active {
+  color: blue;
+}
+
+/* header nav input {
   margin-top: 15px;
   max-height: 50px;
   display: none;
-}
+} */
 
 .link {
-  margin-top: 20px;
+  margin-top: 30px;
+  text-align: right;
+  padding-right: 2em;
+  text-decoration: none;
+}
+
+.link:visited {
+  color: black;
+}
+
+.link:hover {
+  color: red;
+}
+
+.link:active {
+  color: blue;
 }
 
 /* Cards / Main
@@ -30,6 +75,7 @@ header nav input {
 } */
 .cards {
   display: inline;
+  padding: 0;
 }
 .cards li {
   display: flex;
@@ -37,7 +83,7 @@ header nav input {
   list-style: none;
   max-width: 90%;
   /* width: 100%; */
-  margin: 50px auto 90px auto;
+  margin: 50px auto 60px auto;
   border-bottom: solid 1px lightgray;
   text-align: left;
 }
@@ -81,23 +127,47 @@ footer p {
 /* Media Queries (Tablets)
 ============================
 } */
-@media only screen and (max-width: 48em) {
+@media only screen and (min-width: 48em) and (max-width: 60em) {
+  header nav {
+    grid-template-columns: 20px 4fr 1fr 20px;
+  }
+  
+  header nav h1 {
+    /* margin-top: 10; */
+    align-content: flex-start;
+    font-size: 1.5rem;
+  }
+
   .cards {
-    display: inline;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin-left: auto;
+    margin-right: auto; 
+    max-width: 750px;
   }
   .cards li {
-    display: grid;
-    flex-direction: row;
     list-style: none;
-    max-width: 40%;
-    /* width: 100%; */
-    margin: 50px auto 90px auto;
+    margin: 90px auto 10px auto;
     border-bottom: solid 1px lightgray;
     text-align: left;
   }
   
   .cards li img {
-    width: 40%;
+    width: 100%;
     height: auto;
+  }
+}
+
+/* Media Queries (Laptops and Bigger)
+=====================================
+} */
+@media only screen and (min-width: 60em) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
   }
 }
