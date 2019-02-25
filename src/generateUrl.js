@@ -13,3 +13,5 @@
   // state = {
   //   url: '/'
   // }
+
+  // <img src={article.urlToImage} onClick={() => this.props.generateUrl(article.source.name, article.author, article.publishedAt)} alt=""/> 
