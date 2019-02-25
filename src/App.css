@@ -42,7 +42,7 @@ header nav h1 {
 }
 
 .site-name:active {
-  color: blue;
+  color: rgb(4, 4, 119);
 }
 
 /* header nav input {
@@ -125,13 +125,21 @@ header nav h1 {
   font-size: 1.8rem;
 }
 
+
 .maininfo ol {
   margin: 10px 0 20px 40px;
+  color: rgb(4, 4, 119);
+  font-weight: 600;
+}
+
+.no-results {
+  margin: 10px 0 20px 80px;
 }
 
 .refresh-warn {
   margin: 40px;
   text-align: center;
+  color: rgb(207, 84, 12);
 }
 
 .card {
