@@ -1,35 +1,5 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Header / Nav
+============================
 } */
 header nav {
   display: inline-flex;
@@ -55,6 +25,9 @@ header nav input {
   margin-top: 20px;
 }
 
+/* Cards / Main
+============================
+} */
 .cards {
   display: inline;
 }
@@ -79,16 +52,52 @@ header nav input {
   max-width: 90%;
 }
 
+.refresh-warn {
+  margin-top: 80px;
+  position: absolute;
+  display: flex;
+  align-self: center;
+}
+
+/* Footer
+============================
+} */
 footer ul li {
   display: inline-flex;
-  /* justify-content: center; */
+  justify-content: space-evenly;
   flex-direction: column;
   flex-wrap: wrap;
   flex-direction: row;
   list-style: none;
+  padding: 0.5rem;
 }
 
 footer p {
   display: block;
   text-align: center;
+}
+
+
+/* Media Queries (Tablets)
+============================
+} */
+@media only screen and (max-width: 48em) {
+  .cards {
+    display: inline;
+  }
+  .cards li {
+    display: grid;
+    flex-direction: row;
+    list-style: none;
+    max-width: 40%;
+    /* width: 100%; */
+    margin: 50px auto 90px auto;
+    border-bottom: solid 1px lightgray;
+    text-align: left;
+  }
+  
+  .cards li img {
+    width: 40%;
+    height: auto;
+  }
 }
