@@ -74,7 +74,7 @@ header nav h1 {
   flex-direction: column;
   list-style: none;
   max-width: 90%;
-  margin: 80px auto 60px auto;
+  margin: 80px auto 40px auto;
   border-bottom: solid 1px lightgray;
   text-align: left;
 }
