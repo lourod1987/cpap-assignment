@@ -18,7 +18,7 @@ export default class ArticleContainer extends Component {
     const apiKey = '2d2509aeb33d472da6f8f1cc4c4aa211';
     // const spareUrl = `https://newsapi.org/v2/everything?q=tech&apiKey=${apiKey}`
 
-    fetch(`https://newsapi.org/v2/top-headlines?sources=engadget&apiKey=${apiKey}`)
+    fetch(`https://newsapi.org/v2/everything?sources=engadget&apiKey=${apiKey}`)
     .then(res => res.json())
     .then(data => {
       this.setState({
