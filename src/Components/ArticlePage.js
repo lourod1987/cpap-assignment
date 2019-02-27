@@ -5,11 +5,11 @@ import Footer from './Footer'
 
 export default class ArticlePage extends Component {
   render() {
-    const { article, fullArticle } = this.props;
+    const { article, setFullArticle } = this.props;
     return (
         <div>
             <Navbar />
-            <Card article={article} fullArticle={fullArticle} />
+            <Card article={article} setFullArticle={setFullArticle} />
             <Footer />
         </div>
     );
