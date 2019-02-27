@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
+import update from 'immutability-helper';
 import ArticleListPage from './ArticleListPage';
 import UserInfoPage from './UserInfoPage';
 import ArticlePage from './ArticlePage';
 import { Route } from 'react-router-dom';
+import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from 'constants';
 
 export default class ArticleContainer extends Component {
 
   state = {
     article: {},
     articles: [],
-    i: 0,
     visited: [],
-    viewedFull: []
+    z: -1
   }
 
   componentDidMount() {
@@ -31,43 +32,62 @@ export default class ArticleContainer extends Component {
   }
 
   goToArticle = (index) => {
-    this.setIndex(index);
-
     let article = Object.assign({}, this.state.articles[index])
     this.setState({
       article 
     });
     // console.log("index val: " + index)
     // setTimeout(() => console.log(this.state.article), 800)
+    this.forceUpdate();
     this.visitedArticles(index);
   }
 
-  setIndex = (index) => {
-    this.setState({
-      i: index
-    });
-    // setTimeout(() => console.log("i state val: " + this.state.i), 800)
-  }
-
   visitedArticles = (index) => {
+    // for (let i = 0; i < this.state.visited.length; i++) {
+    //   if(this.state.visited[i].viewed === this.state.article.title) {
+    //     return console.log('entry already exists')
+    //   }
+    // }
     this.setState( prevState => ({
       visited: [...prevState.visited, {
         viewed: this.state.articles[index].title,
-      }]
+        seen: 'True',
+        fullArticle: 'False'
+      }],
     }))
-    // console.log(this.state.visited)
+    setTimeout(() => console.log(this.state.visited), 800)
+    this.increment()
   }
 
-  fullArticle = (title) => {
-    this.setState( prevState => ({
-      viewedFull: [...prevState.viewedFull, {
-        fullArticle: title,
-      }]
-    }));
+  increment = () => {
+    this.setState({
+      z: this.state.z + 1
+    })
+  }
+
+  setFullArticle = () => {
+    const { z } = this.state;
+  //   this.setState({
+  //     visited: update(visited, {0: {fullArticle: {$set: 'True'}}})
+  //   });
+  //   setTimeout(() => console.log(this.state.visited), 800)
+    let visited = [...this.state.visited];
+    // let visit = {...visited[z]};
+    // visit.fullArticle = 'True';
+    let visit = {
+      ...visited[z],
+      fullArticle: 'True'
+    }
+    visited[z] = visit;
+    this.setState({
+      visited
+    });
+    setTimeout(() => console.log(this.state.z), 800)
+    setTimeout(() => console.log(this.state.visited), 800)
   }
 
   render() {
-    const { article, articles, visited, viewedFull } = this.state;
+    const { article, articles, visited } = this.state;
     return (
       <div>
         <Route exact path="/" render={ () => (
@@ -80,13 +100,13 @@ export default class ArticleContainer extends Component {
             <ArticlePage 
               article={article} 
               visited={visited} 
-              fullArticle={this.fullArticle} 
+              setFullArticle={this.setFullArticle}
             />
           )}/>
         <Route exact path="/userinfo" render={ () => (
           <UserInfoPage
             visited={visited}
-            viewedFull={viewedFull}
+            articles={articles}
           />
         )}/>
       </div>
