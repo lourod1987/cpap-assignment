@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 
 export default class Cards extends Component {
   render() {
+    let x = 0;
     const { articles, goToArticle } = this.props;
     return (
       <div>
         <ul className="cards">
           {articles.map( (article, index) => (
-            <li key={`${article.publishedAt}+`}>
+            <li key={`${article.publishedAt}+${x+=1}`}>
               <Link to="/article" className="article-lnk">
                 <img src={article.urlToImage} onClick={() => goToArticle(index)} alt=""/>
                 <h2>{article.title}</h2>
