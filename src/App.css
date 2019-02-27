@@ -1,6 +1,6 @@
 /* Header / Nav
 ============================
-} */
+*/
 header nav {
   display: grid;
   grid-template-columns: 20px 2fr 1fr 20px;
@@ -64,7 +64,7 @@ header nav h1 {
 
 /* Cards / Main
 ============================
-} */
+*/
 .cards {
   display: inline;
   padding: 0;
@@ -101,6 +101,7 @@ header nav h1 {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 1.05rem;
   padding-left: 5px;
+  word-wrap: break-word;
 }
 
 .article-lnk {
@@ -128,7 +129,7 @@ header nav h1 {
 
 .maininfo {
   padding-top: 70px;
-  max-width: 90%;
+  /* max-width: 90%; */
 }
 
 .maininfo h2 {
@@ -144,7 +145,35 @@ header nav h1 {
 }
 
 .no-results {
-  margin: 10px 0 20px 80px;
+  font-size: 1.3rem;
+  margin-top: 10px;
+  text-align: center;
+  color: red;
+}
+
+.maininfo table, th, td {
+  max-width: 90%;
+  /* border: solid 1px black; */
+  margin: 30px auto 0 auto;
+  text-align: center;
+  padding: 10px;
+}
+
+.maininfo th {
+  color: white;
+  background-color: rgb(64, 74, 102);
+  font-family: 'Roboto Slab', serif;
+  font-weight: 900;
+}
+
+.maininfo td {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 600;
+}
+
+tbody {
+  color: white;
+  background-color: #999999;
 }
 
 .refresh-warn {
@@ -210,7 +239,7 @@ header nav h1 {
 
 /* Footer
 ============================
-} */
+*/
 footer {
   margin-top: 50px;
 }
@@ -239,7 +268,7 @@ footer p {
 
 /* Media Queries (Tablets)
 ============================
-} */
+*/
 @media only screen and (min-width: 48em) and (max-width: 60em) {
   header nav {
     grid-template-columns: 20px 4fr 1fr 20px;
@@ -258,8 +287,9 @@ footer p {
 
   .cards {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; */
+    grid: auto-flow / repeat(2, 1fr);
     max-width: 750px;
     margin: 10px auto 10px auto;
   }
@@ -267,6 +297,7 @@ footer p {
     list-style: none;
     border-bottom: solid 1px lightgray;
     text-align: left;
+    /* max-width: 80%; */
   }
   
   .cards li img {
@@ -275,13 +306,19 @@ footer p {
   }
 
   .card li {
-    max-width: 750px;
+    max-width: 740px;
+    padding: 0;
+    margin: 0 auto 0 auto;
+  }
+
+  .card li p {
+    font-size: 1.2rem;
   }
 }
 
 /* Media Queries (Laptops and Bigger)
 =====================================
-} */
+*/
 @media only screen and (min-width: 60em) {
   header nav h1 {
     font-size: 2.6rem;
@@ -295,13 +332,22 @@ footer p {
 
   .cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr; */
+    grid: auto-flow / repeat(3, 1fr);
     max-width: 1200px;
     margin: 40px auto 0 auto;
   }
 
   .card li {
     max-width: 900px;
+  }
+
+  .card li h3 {
+    font-size: 1.8rem;
+  }
+
+  .card li p {
+    font-size: 1.35rem;
   }
 }
