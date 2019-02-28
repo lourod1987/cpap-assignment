@@ -8,8 +8,8 @@ import { Route } from 'react-router-dom';
 export default class ArticleContainer extends Component {
 
   state = {
-    article: {},
     articles: [],
+    article: {},
     visited: [],
     z: -1
   }
