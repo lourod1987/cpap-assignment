@@ -65,6 +65,16 @@ header nav h1 {
 /* Cards / Main
 ============================
 */
+.main-cards-bg {
+  /* background-color: rgb(173, 0, 0); */
+  /* background: rgb(189,29,0); */
+  background: linear-gradient(180deg, rgb(0, 161, 189) 0%, rgb(9, 48, 121) 25%, rgb(18, 0, 66) 60%, rgb(0, 117, 152) 100%);
+}
+.main-cards-board {
+  background-color: white;
+  width: 90%;
+  margin: 0 auto 0 auto;
+}
 .cards {
   display: inline;
   padding: 0;
@@ -241,7 +251,8 @@ tbody {
 ============================
 */
 footer {
-  margin-top: 50px;
+  /* margin-top: 50px; */
+  border-top: 1px solid grey;
 }
 footer ul {
   display: inline-flex;
@@ -328,6 +339,10 @@ footer p {
     margin-top: 60px;
     text-align: left;
     font-size: 1.5rem;
+  }
+
+  .main-cards-board {
+    width: 70%;
   }
 
   .cards {
