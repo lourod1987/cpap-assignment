@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import update from 'immutability-helper';
+// import update from 'immutability-helper';
 import ArticleListPage from './ArticleListPage';
 import UserInfoPage from './UserInfoPage';
 import ArticlePage from './ArticlePage';
@@ -11,7 +11,7 @@ export default class ArticleContainer extends Component {
     articles: [],
     article: {},
     visited: [],
-    z: -1
+    i: -1
   }
 
   componentDidMount() {
@@ -22,12 +22,18 @@ export default class ArticleContainer extends Component {
     .then(res => res.json())
     .then(data => {
       this.setState({
-        articles: data.articles
+        articles: data.articles,
       })
-      // console.log(this.state.articles)
+    .catch( error => console.log(error.message))
     });
 
-    // setTimeout(()=>this.goToArticle(this.state.i), 300);
+    // this.setState( prevState => ({
+    //   visited: [{
+    //     viewed: data.articles[0].title,
+    //     seen: 'False',
+    //     fullArticle: 'False'
+    //   }],
+    // }))
   }
 
   goToArticle = (index) => {
@@ -35,53 +41,48 @@ export default class ArticleContainer extends Component {
     this.setState({
       article 
     });
-    // console.log("index val: " + index)
-    // setTimeout(() => console.log(this.state.article), 800)
     this.forceUpdate();
     this.visitedArticles(index);
   }
 
   visitedArticles = (index) => {
-    // for (let i = 0; i < this.state.visited.length; i++) {
-    //   if(this.state.visited[i].viewed === this.state.article.title) {
-    //     return console.log('entry already exists')
-    //   }
-    // }
     this.setState( prevState => ({
-      visited: [...prevState.visited, {
-        viewed: this.state.articles[index].title,
-        seen: 'True',
-        fullArticle: 'False'
-      }],
+      visited: this.state.articles.map( a => {
+      [...prevState.viewed,
+        {
+        viewed: a.title,
+        seen: 'False',
+        fullArticle: 'False' 
+      }]
+      })
     }))
     setTimeout(() => console.log(this.state.visited), 800)
-    this.increment()
+    this.increment();
   }
 
   increment = () => {
     this.setState({
-      z: this.state.z + 1
+      i: this.state.i + 1
     })
   }
 
   setFullArticle = () => {
-    const { z } = this.state;
+    const { i } = this.state;
   //   this.setState({
   //     visited: update(visited, {0: {fullArticle: {$set: 'True'}}})
   //   });
-  //   setTimeout(() => console.log(this.state.visited), 800)
     let visited = [...this.state.visited];
-    // let visit = {...visited[z]};
+    // let visit = {...visited[i]};
     // visit.fullArticle = 'True';
     let visit = {
-      ...visited[z],
+      ...visited[i],
       fullArticle: 'True'
     }
-    visited[z] = visit;
+    visited[i] = visit;
     this.setState({
       visited
     });
-    setTimeout(() => console.log(this.state.z), 800)
+    setTimeout(() => console.log(this.state.i), 800)
     setTimeout(() => console.log(this.state.visited), 800)
   }
 
