@@ -10,9 +10,9 @@ export default class Cards extends Component {
         <main className="main-cards-board">
           <ul className="cards">
             {articles.map( (article, index) => (
-              <li key={`${article.publishedAt}+${x+=1}`}>
+              <li key={`${article.publishedAt}+${x+=1}`} onClick={() => goToArticle(index)}>
                 <Link to="/article" className="article-lnk">
-                  <img src={article.urlToImage} onClick={() => goToArticle(index)} alt=""/>
+                  <img src={article.urlToImage} alt=""/>
                   <h2>{article.title}</h2>
                   <h3>{`${article.source.name} - ${article.author}`}</h3>
                   <p>{article.content}</p>
