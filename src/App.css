@@ -8,9 +8,11 @@ header nav {
   height: 100px;
   position: fixed;
   top: -10px;
-  background-color: white;
-  border-bottom: solid 1px lightgray;
+  /* border-bottom: solid 2px #3FD6BC; */
   margin-top: -20px;
+  background-color: #28283A;
+  /* background: linear-gradient(180deg, #28283A 15%, rgb(0, 117, 152) 94%, #3FD6BC); */
+  /* background: url("./dark-triangles.png") repeat; */
 }
 
 header nav h1 {
@@ -22,18 +24,20 @@ header nav h1 {
 
 .site-name {
   text-decoration: none;
+  color:#3FD6BC;
+  width: 160px;
 }
 
 .site-name:visited {
-  color: black;
+  /* color: black; */
 }
 
 .site-name:hover {
-  color: red;
+  color: #BF8E60;
 }
 
 .site-name:active {
-  color: rgb(4, 4, 119);
+  color: #4D3B42;
 }
 
 /* header nav input {
@@ -48,18 +52,19 @@ header nav h1 {
   padding-right: 2em;
   text-decoration: none;
   font-size: 1.2rem;
+  color: #3FD6BC;
 }
 
 .link:visited {
-  color: black;
+  /* color: black; */
 }
 
 .link:hover {
-  color: red;
+  color: #BF8E60;
 }
 
 .link:active {
-  color: blue;
+  color: #4D3B42;
 }
 
 /* Cards / Main
@@ -68,7 +73,8 @@ header nav h1 {
 .main-cards-bg {
   /* background-color: rgb(173, 0, 0); */
   /* background: rgb(189,29,0); */
-  background: linear-gradient(180deg, rgb(0, 161, 189) 0%, rgb(9, 48, 121) 25%, rgb(18, 0, 66) 60%, rgb(0, 117, 152) 100%);
+  /* background: linear-gradient(180deg, rgb(0, 161, 189) 0%, rgb(9, 48, 121) 25%, rgb(18, 0, 66) 60%, rgb(0, 117, 152) 100%); */
+  /* background: #4D3B42; */
 }
 .main-cards-board {
   background-color: white;
@@ -85,8 +91,10 @@ header nav h1 {
   list-style: none;
   max-width: 90%;
   margin: 80px auto 40px auto;
-  border-bottom: solid 1px lightgray;
+  border-bottom: solid 2px #41836E;
   text-align: left;
+  /* background: url("./dark-triangles.png") repeat fixed; */
+  /* background-color: #4D3B42; */
 }
 
 .cards li img {
@@ -98,6 +106,7 @@ header nav h1 {
   font-family: 'Roboto Slab', serif;
   font-size: 1.8rem;
   padding-left: 5px;
+  color: #BF8E60;
 }
 
 .cards li h3 {
@@ -105,13 +114,17 @@ header nav h1 {
   font-size: 1.3rem;
   font-weight: 300;
   padding-left: 5px;
+  color: #41836E;
 }
 
 .cards li p {
   font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: bold;
   font-size: 1.05rem;
   padding-left: 5px;
   word-wrap: break-word;
+  color: #28283A;
+  /* color: white; */
 }
 
 .article-lnk {
@@ -206,16 +219,20 @@ tbody {
 .card li h2 {
   font-family: 'Roboto Slab', serif;
   font-size: 1.8rem;
+  color: #BF8E60;
 }
 
 .card li h3 {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.4rem;
   font-weight: 300;
+  color: #41836E;
 }
 
 .card li p {
   font-family: 'M PLUS Rounded 1c', sans-serif;
+  color: #28283A;
+  font-weight: bold;
 }
 
 .card img {
@@ -235,16 +252,19 @@ tbody {
   font-weight: bold;
   padding: 1.2em;
   border-radius: 15px;
-  color: white;
-  background-color: red;
-  border: solid 5px white;
+  color: #3FD6BC;
+  /* background-color: #28283A; */
+  background-image: linear-gradient(#41836E,#28283A 90%, #41836E);
+  border: solid 5px #28283A;
   cursor: pointer;
 }
 
 .external-btn:hover {
-  color: red;
-  background-color: white;
-  border: solid 5px red;
+  color: #3FD6BC;
+  /* background-color: #BF8E60; */
+  /* background-image: linear-gradient(#28283A, #28283A); */
+  background-image: linear-gradient(#41836E, #28283A 10%);
+  border: solid 5px #28283A;
 }
 
 /* Footer
@@ -306,7 +326,7 @@ footer p {
   }
   .cards li {
     list-style: none;
-    border-bottom: solid 1px lightgray;
+    border-bottom: solid 2px #41836E;
     text-align: left;
     /* max-width: 80%; */
   }
