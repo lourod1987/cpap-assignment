@@ -1,0 +1,67 @@
+.refresh-warn {
+  margin: 40px;
+  text-align: center;
+  color: rgb(207, 84, 12);
+}
+
+.card {
+  list-style: none;
+  padding: 0;
+  margin-top: 90px;
+}
+
+.card li {
+  margin: 20px auto 0 auto;
+  max-width: 80%;
+}
+
+.card li h2 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.8rem;
+  color: #CC9766;
+}
+
+.card li h3 {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #41836E;
+}
+
+.card li p {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color: #28283A;
+  font-weight: bold;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.external-lnk {
+  display: flex;
+  justify-content: center;
+  margin: 60px auto 0 auto;
+  text-decoration: none;
+}
+
+.external-btn {
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 1.2em;
+  border-radius: 15px;
+  color: #3FD6BC;
+  /* background-color: #28283A; */
+  background-image: linear-gradient(#41836E,#28283A 90%, #41836E);
+  border: solid 5px #28283A;
+  cursor: pointer;
+}
+
+.external-btn:hover {
+  color: #3FD6BC;
+  /* background-color: #CC9766; */
+  /* background-image: linear-gradient(#28283A, #28283A); */
+  background-image: linear-gradient(#41836E, #28283A 10%);
+  border: solid 5px #28283A;
+}

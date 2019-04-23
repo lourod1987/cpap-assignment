@@ -1,0 +1,28 @@
+/* Footer
+============================
+*/
+footer {
+  /* margin-top: 50px; */
+  border-top: 1px solid grey;
+}
+footer ul {
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+}
+footer ul li {
+  /* display: inline-flex; */
+  align-items: center;
+  flex-direction: column;
+  
+  /* flex-direction: row; */
+  list-style: none;
+  padding: 0.5rem;
+}
+
+footer p {
+  display: block;
+  text-align: center;
+}

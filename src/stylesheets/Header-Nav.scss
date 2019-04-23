@@ -1,0 +1,69 @@
+/* Header / Nav
+============================
+*/
+header nav {
+  display: grid;
+  grid-template-columns: 20px 2fr 1fr 20px;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: -10px;
+  /* border-bottom: solid 2px #3FD6BC; */
+  margin-top: -20px;
+  /* background-color: #28283A; */
+  background: linear-gradient(180deg, #41836E, #28283A 45%);
+  /* background: linear-gradient(180deg, #28283A 15%, rgb(0, 117, 152) 94%, #3FD6BC); */
+  /* background: url("./dark-triangles.png") repeat; */
+}
+
+header nav h1 {
+  font-size: 2rem;
+  font-family: 'Share Tech Mono', monospace;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.site-name {
+  text-decoration: none;
+  color:#3FD6BC;
+  width: 160px;
+}
+
+.site-name:visited {
+  /* color: black; */
+}
+
+.site-name:hover {
+  color: #CC9766;
+}
+
+.site-name:active {
+  color: #4D3B42;
+}
+
+/* header nav input {
+  margin-top: 15px;
+  max-height: 50px;
+  display: none;
+} */
+
+.link {
+  margin-top: 40px;
+  text-align: right;
+  padding-right: 2em;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #3FD6BC;
+}
+
+.link:visited {
+  /* color: black; */
+}
+
+.link:hover {
+  color: #CC9766;
+}
+
+.link:active {
+  color: #4D3B42;
+}

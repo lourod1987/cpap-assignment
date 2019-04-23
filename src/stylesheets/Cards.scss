@@ -1,0 +1,83 @@
+/* Cards / Main
+============================
+*/
+/* .main-cards-bg { */
+  /* background-color: rgb(173, 0, 0); */
+  /* background: rgb(189,29,0); */
+  /* background: linear-gradient(180deg, rgb(0, 161, 189) 0%, rgb(9, 48, 121) 25%, rgb(18, 0, 66) 60%, rgb(0, 117, 152) 100%); */
+  /* background: #4D3B42; */
+/* } */
+
+.main-cards-board {
+  background-color: white;
+  width: 100%;
+  margin: 0 auto 0 auto;
+}
+.cards {
+  display: inline;
+  padding: 0;
+}
+.cards li {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  max-width: 90%;
+  margin: 80px auto 40px auto;
+  border-bottom: solid 2px #41836E;
+  text-align: left;
+  /* background: url("./dark-triangles.png") repeat fixed; */
+  /* background-color: #4D3B42; */
+}
+
+.cards li img {
+  width: 100%;
+  height: auto;
+}
+
+.cards li h2 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.8rem;
+  padding-left: 5px;
+  color: #CC9766;
+}
+
+.cards li h3 {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.3rem;
+  font-weight: 300;
+  padding-left: 5px;
+  color: #41836E;
+}
+
+.cards li p {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: bold;
+  font-size: 1.05rem;
+  padding-left: 5px;
+  word-wrap: break-word;
+  color: #28283A;
+  /* color: white; */
+}
+
+.article-lnk {
+  text-decoration: none;
+}
+
+/* .article-lnk:visited {
+  color: black;
+} */
+
+.article-lnk:hover {
+  box-shadow:  5px 5px 8px #28283A;
+  animation-name: tile-move;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  -webkit-animation-name: tile-move;
+  -webkit-animation-duration: 1s; 
+  -webkit-animation-timing-function: linear;
+}
+
+@keyframes tile-move {
+  0% {left: 0px; top: 0px;}
+  100% {left: 100px; top: 20px;}
+}
