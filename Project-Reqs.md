@@ -77,15 +77,15 @@ Building a project to meet requirements and share with team to display and expla
 
 ## TODO
 * Fix and Finish App styling (mobile first)
-* Set up dynamic animations for scrolling, hovering, clicking across 
+* Set up dynamic animations for scrolling, hovering, clicking across
 * Highlighting for currently selected top article (css border around currently selected)
 * Get full list of articles on table of UserInfo page - **DONE**
 * stop interval for autoChange onClick and then start again - **DONE**
 * Set dynamic routing up for each article
 * Create Search functionality and UI
-* Redo file structure
-    - fix page link (imports)
-* Add in .sass and break apart css into multiple files
+* Redo file structure - **DONE**
+    - fix page link (imports) - **DONE**
+* Add in .sass and break apart css into multiple files - **DONE**
 * Implement Redux
     - yarn add redux, redux-thunk, react-redux
     - Create Store Folder
