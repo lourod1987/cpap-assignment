@@ -6,11 +6,11 @@ export default class Cards extends Component {
     let x = 0;
     const { articles, goToArticle } = this.props;
     return (
-      <div className="main-cards-bg">
+      // <div className="main-cards-bg">
         <main className="main-cards-board">
           <ul className="cards">
             {articles.map( (article, index) => (
-              <li key={`${article.publishedAt}+${x+=1}`} onClick={() => goToArticle(index)}>
+              <li key={`${article.publishedAt}+${x+=1}`} onClick={() => goToArticle(index, false)}>
                 <Link to="/article" className="article-lnk">
                   <img src={article.urlToImage} alt=""/>
                   <h2>{article.title}</h2>
@@ -21,7 +21,7 @@ export default class Cards extends Component {
             ))}
           </ul>
         </main>
-      </div>
+      // </div>
     );
   }
 }
