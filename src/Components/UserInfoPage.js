@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import loading from '../imgs/transparent-loading-4.gif';
 
 export default class UserInfoPage extends Component {
 
@@ -14,7 +15,7 @@ export default class UserInfoPage extends Component {
         <main className="maininfo">
          <h2>User Info</h2>
           {visited.length === 0 ?
-          (<p className="no-results">No results yet</p>)
+          (<img src={loading} className="no-results" alt="" />)
           :(<table>
               <thead>
                 <tr>
