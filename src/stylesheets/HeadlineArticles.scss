@@ -1,3 +1,5 @@
+@import "globals";
+
 /* Headline Articles
 ============================
 */
@@ -25,7 +27,7 @@
 }
 
 .primary-headline h2 {
-  color: #CC9766;
+  color: $accent-clr;
   font-family: 'Roboto Slab', serif;
   font-size: 2rem;
   grid-area: 2 / 2 / span 1 / span 1;
@@ -40,7 +42,7 @@
   /* row-gap: 30px; */
   column-gap: 10px;
   max-width: 90%;
-  background: #28283A;
+  background: $primary-clr;
   border-radius: 15px;
   margin: 80px auto 0 auto;
   padding: 0.6rem;
@@ -48,7 +50,7 @@
 }
 
 .mini-headlines img {
-  border: 3px solid #28283A;
+  border: 3px solid $primary-clr;
   border-radius: 5px;
   margin-top: 0;
   min-height: 73px;
@@ -59,11 +61,11 @@
 }
 
 .mini-headlines img:hover {
-  border: 3px solid #3FD6BC;
+  border: 3px solid $standout-clr;
 }
 
 .mini-headlines img:focus {
-  border: 3px solid #3FD6BC;
+  border: 3px solid $standout-clr;
 }
 
 /* .mini-headlines h2 {

@@ -1,0 +1,20 @@
+/* Global Rules and Variables
+==============================
+*/
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+$primary-clr: #28283A;
+$secondary-clr: #41836E;
+$accent-clr: #CC9766;
+$standout-clr: #3FD6BC;

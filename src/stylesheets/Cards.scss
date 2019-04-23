@@ -1,3 +1,5 @@
+@import "globals";
+
 /* Cards / Main
 ============================
 */
@@ -23,7 +25,7 @@
   list-style: none;
   max-width: 90%;
   margin: 80px auto 40px auto;
-  border-bottom: solid 2px #41836E;
+  border-bottom: solid 2px $secondary-clr;
   text-align: left;
   /* background: url("./dark-triangles.png") repeat fixed; */
   /* background-color: #4D3B42; */
@@ -38,7 +40,7 @@
   font-family: 'Roboto Slab', serif;
   font-size: 1.8rem;
   padding-left: 5px;
-  color: #CC9766;
+  color: $accent-clr;
 }
 
 .cards li h3 {
@@ -46,7 +48,7 @@
   font-size: 1.3rem;
   font-weight: 300;
   padding-left: 5px;
-  color: #41836E;
+  color: $secondary-clr;
 }
 
 .cards li p {
@@ -55,7 +57,7 @@
   font-size: 1.05rem;
   padding-left: 5px;
   word-wrap: break-word;
-  color: #28283A;
+  color: $primary-clr;
   /* color: white; */
 }
 
@@ -68,7 +70,7 @@
 } */
 
 .article-lnk:hover {
-  box-shadow:  5px 5px 8px #28283A;
+  box-shadow:  5px 5px 8px $primary-clr;
   animation-name: tile-move;
   animation-duration: 1s;
   animation-timing-function: linear;

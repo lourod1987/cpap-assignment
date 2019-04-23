@@ -1,3 +1,4 @@
+@import "globals";
 @import "Header-Nav";
 @import "HeadlineArticles";
 @import "HeadlineArticles";
@@ -6,21 +7,3 @@
 @import "Table";
 @import "Footer";
 @import "MediaQueries";
-
-
-/* Global Rules and Variables
-==============================
-*/
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
-

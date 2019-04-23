@@ -1,3 +1,5 @@
+@import "globals";
+
 /* Header / Nav
 ============================
 */
@@ -8,11 +10,11 @@ header nav {
   height: 100px;
   position: fixed;
   top: -10px;
-  /* border-bottom: solid 2px #3FD6BC; */
+  /* border-bottom: solid 2px $standout-clr; */
   margin-top: -20px;
-  /* background-color: #28283A; */
-  background: linear-gradient(180deg, #41836E, #28283A 45%);
-  /* background: linear-gradient(180deg, #28283A 15%, rgb(0, 117, 152) 94%, #3FD6BC); */
+  /* background-color: $primary-clr; */
+  background: linear-gradient(180deg, $secondary-clr, $primary-clr 45%);
+  /* background: linear-gradient(180deg, $primary-clr 15%, rgb(0, 117, 152) 94%, $standout-clr); */
   /* background: url("./dark-triangles.png") repeat; */
 }
 
@@ -25,7 +27,7 @@ header nav h1 {
 
 .site-name {
   text-decoration: none;
-  color:#3FD6BC;
+  color:$standout-clr;
   width: 160px;
 }
 
@@ -34,7 +36,7 @@ header nav h1 {
 }
 
 .site-name:hover {
-  color: #CC9766;
+  color: $accent-clr;
 }
 
 .site-name:active {
@@ -53,7 +55,7 @@ header nav h1 {
   padding-right: 2em;
   text-decoration: none;
   font-size: 1.2rem;
-  color: #3FD6BC;
+  color: $standout-clr;
 }
 
 .link:visited {
@@ -61,7 +63,7 @@ header nav h1 {
 }
 
 .link:hover {
-  color: #CC9766;
+  color: $accent-clr;
 }
 
 .link:active {

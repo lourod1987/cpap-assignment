@@ -1,3 +1,5 @@
+@import "globals";
+
 /* Table / UserInfoPage Styles
 ================================
 */
@@ -9,7 +11,7 @@
 .maininfo h2 {
   text-align: center;
   font-size: 1.8rem;
-  color: #CC9766;
+  color: $accent-clr;
 }
 
 
@@ -34,8 +36,8 @@
 }
 
 .maininfo th {
-  color: #CC9766;
-  /* background-color: #28283A; */
+  color: $accent-clr;
+  /* background-color: $primary-clr; */
   background: url("../imgs/dark-triangles.png") center repeat;
   font-family: 'Roboto Slab', serif;
   font-weight: 900;
@@ -47,7 +49,7 @@
 }
 
 tbody {
-  color: #28283A;
+  color: $primary-clr;
   /* background-color: #5DBA9D; */
   background-color: rgb(224, 231, 229);
 }

@@ -1,3 +1,8 @@
+@import "globals";
+
+/* Card / Article Page
+============================
+*/
 .refresh-warn {
   margin: 40px;
   text-align: center;
@@ -18,19 +23,19 @@
 .card li h2 {
   font-family: 'Roboto Slab', serif;
   font-size: 1.8rem;
-  color: #CC9766;
+  color: $accent-clr;
 }
 
 .card li h3 {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.4rem;
   font-weight: 300;
-  color: #41836E;
+  color: $secondary-clr;
 }
 
 .card li p {
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  color: #28283A;
+  color: $primary-clr;
   font-weight: bold;
 }
 
@@ -51,17 +56,17 @@
   font-weight: bold;
   padding: 1.2em;
   border-radius: 15px;
-  color: #3FD6BC;
-  /* background-color: #28283A; */
-  background-image: linear-gradient(#41836E,#28283A 90%, #41836E);
-  border: solid 5px #28283A;
+  color: $standout-clr;
+  /* background-color: $primary-clr; */
+  background-image: linear-gradient($secondary-clr,$primary-clr 90%, $secondary-clr);
+  border: solid 5px $primary-clr;
   cursor: pointer;
 }
 
 .external-btn:hover {
-  color: #3FD6BC;
-  /* background-color: #CC9766; */
-  /* background-image: linear-gradient(#28283A, #28283A); */
-  background-image: linear-gradient(#41836E, #28283A 10%);
-  border: solid 5px #28283A;
+  color: $standout-clr;
+  /* background-color: $accent-clr; */
+  /* background-image: linear-gradient($primary-clr, $primary-clr); */
+  background-image: linear-gradient($secondary-clr, $primary-clr 10%);
+  border: solid 5px $primary-clr;
 }
