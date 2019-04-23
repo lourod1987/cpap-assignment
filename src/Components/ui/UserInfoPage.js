@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import loading from '../imgs/transparent-loading-4.gif';
+import loading from '../../imgs/transparent-loading-4.gif';
 
 export default class UserInfoPage extends Component {
 

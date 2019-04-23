@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-// import update from 'immutability-helper';
-import ArticleListPage from './ArticleListPage';
-import UserInfoPage from './UserInfoPage';
-import ArticlePage from './ArticlePage';
 import { Route } from 'react-router-dom';
+// import update from 'immutability-helper';
+import ArticleListPage from '../ui/ArticleListPage';
+import UserInfoPage from '../ui/UserInfoPage';
+import ArticlePage from '../ui/ArticlePage';
 
 export default class ArticleContainer extends Component {
 

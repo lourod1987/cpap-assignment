@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 import HeadlineStories from './HeadlineStories';
 import Cards from './Cards';
 import Footer from './Footer';
-import loading from '../imgs/transparent-loading-4.gif';
+import loading from '../../imgs/transparent-loading-4.gif';
 
 export default class ArticleListPage extends Component {
     
