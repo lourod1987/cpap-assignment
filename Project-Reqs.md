@@ -72,4 +72,34 @@ Building a project to meet requirements and share with team to display and expla
     - need to keep track of when the user clicks on any link to view the full article
 * Footer again
 
-add objects to an array. Each object takes name property with a string value for title of the article and a engagdet property with a boolean value to say whether the full article was visited
+* Add objects to an array. Each object takes name property with a string value for the title of the article and a seen property with a boolean value to show whether the page was visited and a visited property with a boolean value to show whether the full article was visited. - **DONE**
+
+
+## TODO
+* Fix and Finish App styling (mobile first)
+* Set up dynamic animations for scrolling, hovering, clicking across 
+* Highlighting for currently selected top article (css border around currently selected)
+* Get full list of articles on table of UserInfo page - **DONE**
+* stop interval for autoChange onClick and then start again - **DONE**
+* Set dynamic routing up for each article
+* Create Search functionality and UI
+* Redo file structure
+    - fix page link (imports)
+* Add in .sass and break apart css into multiple files
+* Implement Redux
+    - yarn add redux, redux-thunk, react-redux
+    - Create Store Folder
+        - Create Reducers File
+        - Create index.js
+    - Create Constants File
+    - Create Actions File
+    - Create initialState.json
+* Refactor
+    - Review code: simplify where possible
+    - Ensure best practices
+    - Apply functional logic throughout Application
+    - Clear all error and warning messages
+* Extras:
+    - Implement Jest Unit and UI tests
+    - PropTypes
+    - lighthouse test performance (see what can be improved)
