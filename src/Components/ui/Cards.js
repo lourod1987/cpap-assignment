@@ -15,7 +15,8 @@ export default class Cards extends Component {
                   <img src={article.urlToImage} alt=""/>
                   <h2>{article.title}</h2>
                   <h3>{`${article.source.name} - ${article.author}`}</h3>
-                  <p>{article.content}</p>
+                  <p>{article.description}</p>
+                  {/* <p>{article.content}</p> */}
                 </Link>
               </li>
             ))}
