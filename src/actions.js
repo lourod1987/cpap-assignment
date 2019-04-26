@@ -1,6 +1,6 @@
 import C from './constants';
 
-export function setArticle(title, source="Engadget", author, description, content, img, url) {
+export const setArticle = (title, source="Engadget", author, description, content, img, url) => {
   return {
     type: C.SET_ARTICLE,
     payload: {
@@ -14,3 +14,15 @@ export function setArticle(title, source="Engadget", author, description, conten
       }
   }
 }
+
+export const addError = message => 
+({
+  type: C.ADD_ERROR,
+  payload: message
+});
+
+export const clearError = index => 
+({
+  type: C.CLEAR_ERROR,
+  payload: index
+});
