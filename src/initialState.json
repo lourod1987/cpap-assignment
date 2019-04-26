@@ -1,4 +1,5 @@
 {
+  "headlines": [],
   "articles": [
     {
       "author": "AJ Dellinger",
@@ -10,6 +11,8 @@
       "content": "Mattel's View-Master is a toy that has hit just about every generation of kid for the better part of the last century. It was first introduced in 1939 and has undergone a number of transformations and modernization efforts over the last few years. Most recent… [+601 chars]"
     }
   ],
+  "fullList": [],
   "article": {},
-  "visited": []
+  "visited": [],
+  "errors": []
 }
