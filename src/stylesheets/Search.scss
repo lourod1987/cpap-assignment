@@ -1,0 +1,30 @@
+@import "globals";
+
+.search-bar {
+  margin: 70px 0 0 0;
+  text-align: center;
+  // width: 100%
+}
+
+.search-bar input {
+  padding: 1.3rem;
+  width: 100%;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.search-instructions {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 50px 0 150px 0;
+  color: $accent-clr;
+  min-height: 550px;
+}
+
+.no-matching-results {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 50px 0 150px 0;
+  color: $accent-clr;
+  min-height: 550px;
+}
