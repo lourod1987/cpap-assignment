@@ -77,12 +77,14 @@ Building a project to meet requirements and share with team to display and expla
 
 ## TODO
 * Fix and Finish App styling (mobile first)
+    - Back to Top Button main page (possibly search page)
+    - Back / Close button in article page
+* Create Site logo - **DONE**
 * Set up dynamic animations for scrolling, hovering, clicking across
-* Highlighting for currently selected top article (css border around currently selected)
+* Highlighting for currently selected top article (css border around currently selected) - **DONE**
 * Get full list of articles on table of UserInfo page - **DONE**
 * stop interval for autoChange onClick and then start again - **DONE**
-* Set dynamic routing up for each article
-* Create Search functionality and UI
+* Create Search functionality and UI - **DONE**
 * Redo file structure - **DONE**
     - fix page link (imports) - **DONE**
 * Add in .sass and break apart css into multiple files - **DONE**
@@ -98,8 +100,12 @@ Building a project to meet requirements and share with team to display and expla
     - Review code: simplify where possible
     - Ensure best practices
     - Apply functional logic throughout Application
-    - Clear all error and warning messages
+    - Clear all error and warning 
+    - Write comments throughout App 
+* Rewrite Project/Repo README
 * Extras:
-    - Implement Jest Unit and UI tests
     - PropTypes
+    - Set dynamic routing up for each article
+    - Set up 404 Pages
+    - Implement Jest Unit and UI tests
     - lighthouse test performance (see what can be improved)
