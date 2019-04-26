@@ -42,6 +42,7 @@ export default class ArticleContainer extends Component {
     setTimeout(() => this.visitedArticles(), 800);
 
     setTimeout(() => this.setArticlesForSearch(), 800);
+    
   }
 
   goToArticle = (index, type, title) => {
