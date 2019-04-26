@@ -3,6 +3,13 @@
 /* Headline Articles
 ============================
 */
+.headlines-container {
+  // background-color: $primary-clr;
+  background-color: $bg-clr;
+  // background-color: #FFFFFF;
+  padding-bottom: 15px;
+}
+
 .primary-headline a {
   display: grid;
   /* grid-template-rows / grid-template-columns; */
@@ -42,15 +49,16 @@
   /* row-gap: 30px; */
   column-gap: 10px;
   max-width: 90%;
-  background: $primary-clr;
+  // background: $accent-clr;
+  // background: $primary-clr;
   border-radius: 15px;
   margin: 80px auto 0 auto;
-  padding: 0.6rem;
+  padding: 0.9rem;
   justify-content: center;
 }
 
 .mini-headlines img {
-  border: 3px solid $primary-clr;
+  // border: 3px solid $primary-clr;
   border-radius: 5px;
   margin-top: 0;
   min-height: 73px;
@@ -60,8 +68,12 @@
   /* justify-self: center; */
 }
 
+.currentlySelected {
+  border: 6px inset $standout-clr;
+}
+
 .mini-headlines img:hover {
-  border: 3px solid $standout-clr;
+  border: 4px solid $standout-clr;
 }
 
 .mini-headlines img:focus {
