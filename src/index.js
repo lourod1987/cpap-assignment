@@ -4,9 +4,8 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './components/ui/App';
 import * as serviceWorker from './serviceWorker';
-import C from './constants';
 import storeFactory from './store';
-import { setArticle } from './actions';
+import { setArticle, addError } from './actions';
 
 const initialState = (localStorage['redux-store']) ? JSON.parse(localStorage['redux-store']) :
   {};
@@ -20,10 +19,9 @@ const store = storeFactory(initialState);
 
 store.subscribe(saveState);
 
-store.dispatch({
-  type: C.ADD_ERROR,
-  payload: 'this is a test error'
-})
+store.dispatch(
+  addError('this is a test error')
+)
 
 store.dispatch(
   setArticle("This is a crazy tech story title","Engadget", "Lou Ye", "snazzy clickbait here", "some long paragraph here", "img link here", "full article link here")
