@@ -52,9 +52,9 @@ export default class HeadlineStories extends Component {
         {headlines.length === 0 ?
           (<p>Loading</p>) :
         (
-          <div>
+          <div className="headlines-container">
             <div className="primary-headline">
-              <Link to="/article" className="primary-head-lnk" onClick={() => goToArticle(i, true)}>
+              <Link to="/article" className="primary-head-lnk" onClick={() => goToArticle(i, "headline", null)}>
                 <img src={headlines[i].urlToImage} alt="" />
                 <h2>{headlines[i].title}</h2>
               </Link>
@@ -62,7 +62,7 @@ export default class HeadlineStories extends Component {
               <ul className="mini-headlines">
               {headlines.map( (headlines, index) => (
                 <li key={headlines.publishedAt}>
-                  <img src={headlines.urlToImage} alt="" onClick={() => this.handleClick(index)}/>
+                  <img src={headlines.urlToImage} alt="" className={ (i === index) ? "currentlySelected" : ""} onClick={() => this.handleClick(index)}/>
                   {/* <h2>{headlines.title}</h2> */}
                 </li>
               ))}
