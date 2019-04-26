@@ -12,6 +12,7 @@
   text-align: center;
   font-size: 1.8rem;
   color: $accent-clr;
+  margin-top: 30px;
 }
 
 
@@ -37,10 +38,10 @@
 
 .maininfo th {
   color: $accent-clr;
-  /* background-color: $primary-clr; */
-  background: url("../imgs/dark-triangles.png") center repeat;
   font-family: 'Roboto Slab', serif;
   font-weight: 900;
+  background: url("../imgs/dark-triangles.png") center repeat;
+  // background-color: $primary-clr;
 }
 
 .maininfo td {
@@ -50,6 +51,7 @@
 
 tbody {
   color: $primary-clr;
-  /* background-color: #5DBA9D; */
   background-color: rgb(224, 231, 229);
+  // background-color: $secondary-clr;
+  // background-color: #5DBA9D;
 }
