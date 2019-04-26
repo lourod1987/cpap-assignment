@@ -1,8 +1,8 @@
 import C from '../constants';
 import { combineReducers } from 'redux';
 
-export const article = (state={}, action) =>
-  (action.type === C.SET_ARTICLE_TO_DISPLAY) ?
+export const setArticle = (state={}, action) =>
+  (action.type === C.SET_ARTICLE) ?
     action.payload :
     state;
 
@@ -18,6 +18,6 @@ export const errors = (state=[], action) => {
 }
 
 export default combineReducers({
-  article,
+  setArticle,
   errors
 })
