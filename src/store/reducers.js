@@ -20,4 +20,4 @@ export const errors = (state=[], action) => {
 export default combineReducers({
   setArticle,
   errors
-})
+});
