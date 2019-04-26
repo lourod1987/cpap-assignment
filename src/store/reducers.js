@@ -1,4 +1,5 @@
 import C from '../constants';
+import { combineReducers } from 'redux';
 
 export const article = (state={}, action) =>
   (action.type === C.SET_ARTICLE_TO_DISPLAY) ?
@@ -15,3 +16,8 @@ export const errors = (state=[], action) => {
       return state;
   }
 }
+
+export default combineReducers({
+  article,
+  errors
+})
