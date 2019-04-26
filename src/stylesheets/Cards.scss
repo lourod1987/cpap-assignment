@@ -3,18 +3,25 @@
 /* Cards / Main
 ============================
 */
-/* .main-cards-bg { */
-  /* background-color: rgb(173, 0, 0); */
-  /* background: rgb(189,29,0); */
-  /* background: linear-gradient(180deg, rgb(0, 161, 189) 0%, rgb(9, 48, 121) 25%, rgb(18, 0, 66) 60%, rgb(0, 117, 152) 100%); */
-  /* background: #4D3B42; */
-/* } */
+.main-cards-bg {
+  margin-bottom: 0;
+  background: linear-gradient(95deg,  $secondary-clr 0%, $standout-clr 100%);
+}
+
+.alt-cards-bg {
+  background-color: $bg-clr;
+}
 
 .main-cards-board {
-  background-color: white;
+  // background-color: $bg-clr;
+  // background-color: $primary-clr;
+  // background-color: $primary-clr;
+  // background: linear-gradient(90deg,  $secondary-clr 0%, $standout-clr 100%);
+  // background: linear-gradient(-90deg, $standout-clr 0%, #008552 100%);
   width: 100%;
   margin: 0 auto 0 auto;
 }
+
 .cards {
   display: inline;
   padding: 0;
@@ -25,10 +32,10 @@
   list-style: none;
   max-width: 90%;
   margin: 80px auto 40px auto;
-  border-bottom: solid 2px $secondary-clr;
+  border-bottom: solid 3px $secondary-clr;
   text-align: left;
   /* background: url("./dark-triangles.png") repeat fixed; */
-  /* background-color: #4D3B42; */
+  background-color: #FFFFFF;
 }
 
 .cards li img {
@@ -69,7 +76,7 @@
   color: black;
 } */
 
-.article-lnk:hover {
+.cards li:hover {
   box-shadow:  5px 5px 8px $primary-clr;
   animation-name: tile-move;
   animation-duration: 1s;
