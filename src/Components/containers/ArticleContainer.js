@@ -171,27 +171,27 @@ export default class ArticleContainer extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    // title: state.articles.title, 
-    // source: state.articles.source.name,
-    // author: state.articles.author,
-    // description: state.articles.description,
-    // content: state.articles.content,
-    // img: state.articles.urlToImg,
-    // url: state.articles.url
-    getTopStories: state.getTopStories
-  }
-}
+// const mapStateToProps = state => {
+//   return {
+//     // title: state.articles.title, 
+//     // source: state.articles.source.name,
+//     // author: state.articles.author,
+//     // description: state.articles.description,
+//     // content: state.articles.content,
+//     // img: state.articles.urlToImg,
+//     // url: state.articles.url
+//     getTopStories: state.getTopStories
+//   }
+// }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    getFunc() {
-      dispatch(
-        getTopStories()
-      )
-    }
-  }
-}
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     getFunc() {
+//       dispatch(
+//         getTopStories()
+//       )
+//     }
+//   }
+// }
 
-const Container = connect(mapStateToProps, mapDispatchToProps)(ArticleContainer);
+// const Container = connect(mapStateToProps, mapDispatchToProps)(ArticleContainer);
