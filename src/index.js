@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
-import App from './Components/ui/App';
+import App from './components/ui/App';
 import * as serviceWorker from './serviceWorker';
 import storeFactory from './store';
 import { setArticle, addError, getTopStories } from './actions';

@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 import ArticleListPage from '../ui/ArticleListPage';
 import UserInfoPage from '../ui/UserInfoPage';
 import ArticlePage from '../ui/ArticlePage';
-// import SearchPage from '../ui/SearchPage';
+import SearchPage from '../ui/SearchPage';
 // import { connect } from 'react-redux';
 // import { getTopStories } from '../../actions';
 
@@ -160,12 +160,12 @@ export default class ArticleContainer extends Component {
             articles={articles}
           />
         )}/>
-        {/* <Route path="/search" render={ () => (
+        <Route path="/search" render={ () => (
           <SearchPage
             fullList={fullList}
             goToArticle={this.goToArticle}
           />
-        )}/> */}
+        )}/>
       </div>
     );
   }
