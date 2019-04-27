@@ -5,7 +5,8 @@ import './index.css';
 import App from './components/ui/App';
 import * as serviceWorker from './serviceWorker';
 import storeFactory from './store';
-import { setArticle, addError } from './actions';
+import { setArticle, addError, getTopStories } from './actions';
+import { Provider } from 'react-redux';
 
 const initialState = (localStorage['redux-store']) ? JSON.parse(localStorage['redux-store']) :
   {};
@@ -16,19 +17,28 @@ const saveState = () => {
 }
 
 const store = storeFactory(initialState);
-
 store.subscribe(saveState);
 
-store.dispatch(
-  addError('this is a test error')
-)
+// store.dispatch(
+//   addError('this is a test error')
+// )
+
+// store.dispatch(
+//   setArticle("This is a crazy tech story title","Engadget", "Lou Ye", "snazzy clickbait here", "some long paragraph here", "img link here", "full article link here")
+// )
 
 store.dispatch(
-  setArticle("This is a crazy tech story title","Engadget", "Lou Ye", "snazzy clickbait here", "some long paragraph here", "img link here", "full article link here")
+  getTopStories()
 )
+
+window.store = store;
 
 ReactDOM.render(
-  <BrowserRouter><App /></BrowserRouter>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 );
 
