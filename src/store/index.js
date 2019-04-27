@@ -11,9 +11,10 @@ const consoleMesssages = store => next => action => {
 
   result = next(action);
 
-  let { setArticle, errors } = store.getState();
+  let { getTopStories, setArticle, errors } = store.getState();
 
   console.log(`
+    topStories: ${JSON.stringify(getTopStories)}
     article: ${JSON.stringify(setArticle)}
     errors: ${errors.length}
   `);
