@@ -5,6 +5,8 @@
 */
 .main-cards-bg {
   margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background: linear-gradient(95deg,  $secondary-clr 0%, $standout-clr 100%);
 }
 
@@ -25,17 +27,19 @@
 .cards {
   display: inline;
   padding: 0;
+  // margin-top: 50px;
 }
+
 .cards li {
   display: flex;
   flex-direction: column;
   list-style: none;
-  max-width: 90%;
+  max-width: 100%;
   margin: 80px auto 40px auto;
   border-bottom: solid 3px $secondary-clr;
   text-align: left;
-  /* background: url("./dark-triangles.png") repeat fixed; */
   background-color: #FFFFFF;
+  /* background: url("./dark-triangles.png") repeat fixed; */
 }
 
 .cards li img {
@@ -45,26 +49,30 @@
 
 .cards li h2 {
   font-family: 'Roboto Slab', serif;
-  font-size: 1.8rem;
-  padding-left: 5px;
+  font-size: 1.7rem;
+  padding-left: 15px;
   color: $accent-clr;
+  margin: 10px 0 20px 0;
 }
 
 .cards li h3 {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.3rem;
   font-weight: 300;
-  padding-left: 5px;
+  padding-left: 15px;
   color: $secondary-clr;
+  margin: 10px 0 20px 0;
 }
 
 .cards li p {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: bold;
   font-size: 1.05rem;
-  padding-left: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
   word-wrap: break-word;
   color: $primary-clr;
+  margin: 10px 0 30px 0;
   /* color: white; */
 }
 

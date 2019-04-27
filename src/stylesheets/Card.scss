@@ -4,7 +4,7 @@
 ============================
 */
 .refresh-warn {
-  margin: 40px;
+  margin: 110px;
   text-align: center;
   color: rgb(207, 84, 12);
 }
@@ -16,27 +16,37 @@
 }
 
 .card li {
-  margin: 20px auto 0 auto;
-  max-width: 80%;
+  margin: -20px auto 0 auto;
+  // max-width: 90%;
+}
+
+.card li img {
+  width: 100%;
 }
 
 .card li h2 {
   font-family: 'Roboto Slab', serif;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: $accent-clr;
+  margin: 10px auto 20px auto;
+  max-width: 90%;
 }
 
 .card li h3 {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 300;
   color: $secondary-clr;
+  margin: 0 auto 20px auto;
+  max-width: 90%;
 }
 
 .card li p {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   color: $primary-clr;
   font-weight: bold;
+  margin: 0 auto 0 auto;
+  max-width: 90%;
 }
 
 .card img {
@@ -47,8 +57,11 @@
 .external-lnk {
   display: flex;
   justify-content: center;
-  margin: 60px auto 0 auto;
+  margin: 40px auto 0 auto;
   text-decoration: none;
+  max-width: 165px;
+  // max-height: 80px;
+  margin-bottom: 35px;
 }
 
 .external-btn {
@@ -56,24 +69,24 @@
   font-weight: bold;
   padding: 1.2em;
   border-radius: 15px;
-  color: $standout-clr;
+  // color: $standout-clr;
   color: $bg-clr;
   /* background-color: $primary-clr; */
   // background-image: linear-gradient($secondary-clr,$primary-clr 90%, $secondary-clr);
-  // background-image: linear-gradient(-120deg,  $secondary-clr 0%, $standout-clr 100%);
+  background-image: linear-gradient(-120deg,  $secondary-clr 0%, $standout-clr 100%);
   background-color: $secondary-clr;
-  border: solid 5px $primary-clr;
+  // border: solid 5px $primary-clr;
   border: none;
   cursor: pointer;
-  margin-bottom: 35px;
 }
 
 .external-btn:hover {
-  // color: $standout-clr;
-  color: $accent-clr;
-  background-color: $standout-clr;
+  color: $standout-clr;
+  // color: $accent-clr;
+  background-image: linear-gradient(0deg, $primary-clr 0%, $secondary-clr 100%);
+  // background-color: $standout-clr;
   /* background-color: $accent-clr; */
-  /* background-image: linear-gradient($primary-clr, $primary-clr); */
+  // background-image: linear-gradient(-120deg,  $standout-clr 0%, $secondary-clr 100%);
   // background-image: linear-gradient($secondary-clr, $primary-clr 10%);
   // border: solid 5px $primary-clr;
 }

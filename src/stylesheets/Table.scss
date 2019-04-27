@@ -5,6 +5,7 @@
 */
 .maininfo {
   padding-top: 70px;
+  margin-bottom: 50px;
   /* max-width: 90%; */
 }
 
@@ -37,7 +38,7 @@
 }
 
 .maininfo th {
-  color: $accent-clr;
+  color: $standout-clr;
   font-family: 'Roboto Slab', serif;
   font-weight: 900;
   background: url("../imgs/dark-triangles.png") center repeat;
