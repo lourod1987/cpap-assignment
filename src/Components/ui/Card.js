@@ -15,7 +15,7 @@ export default class Card extends Component {
               <h2>{article.title || headlines.title}</h2>
               <h3>{article.source.name + " - " + article.author || headlines.source.name + " - " + headlines.author}</h3>
               {/* <p>{article.description || headlines.description}</p> */}
-              <p>{`${article.description || headlines.description} ${article.content || headlines.content}`}</p>
+              <p>{`${article.description || headlines.description} \n ${article.content || headlines.content}`}</p>
             </li>
             <a href={article.url || headlines.url} target="_blank" rel="noopener noreferrer" className="external-lnk">
               <button className="external-btn" onClick={() => setFullArticle()}>View on Engagdet</button>
