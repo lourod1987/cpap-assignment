@@ -85,14 +85,14 @@
 */
 @media only screen and (min-width: 85em) {
   header nav {
-    grid-template-columns: 100px 40px 2fr 100px 100px 100px;
+    grid-template-columns: 330px 40px 2fr 100px 100px 370px;
     column-gap: 20px;
   }
 
   .nav-logo {
     width: 40px;
     height: 40px;
-    margin-left: 5px;
+    margin-left: 25px;
   }
 
   header nav h1 {
@@ -128,7 +128,7 @@
   
   .primary-headline img {
     width: 100%;
-    max-width: 70%;
+    max-width: 60%;
     height: auto;
     margin: 0 auto 0 auto;
     /* min-height: 420px; */
@@ -138,13 +138,14 @@
   }
   
   .primary-headline h2 {
-    max-width: 70%;
+    max-width: 60%;
     margin: 0 auto 0 auto;
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     grid-area: 2 / 1 / span 1 / span 1;
   }
+
   .mini-headlines {
-    max-width: 70%;
+    max-width: 60%;
     margin: 30px auto 50px auto;
   }
 
