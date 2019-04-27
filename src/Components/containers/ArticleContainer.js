@@ -5,6 +5,9 @@ import ArticleListPage from '../ui/ArticleListPage';
 import UserInfoPage from '../ui/UserInfoPage';
 import ArticlePage from '../ui/ArticlePage';
 import SearchPage from '../ui/SearchPage';
+import { connect } from 'react-redux';
+import { getTopStories } from '../../actions';
+
 
 export default class ArticleContainer extends Component {
 
@@ -42,7 +45,9 @@ export default class ArticleContainer extends Component {
     setTimeout(() => this.visitedArticles(), 800);
 
     setTimeout(() => this.setArticlesForSearch(), 800);
-    
+
+    setTimeout(() => console.log(this.state.headlines), 800);
+
   }
 
   goToArticle = (index, type, title) => {
@@ -165,3 +170,28 @@ export default class ArticleContainer extends Component {
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    // title: state.articles.title, 
+    // source: state.articles.source.name,
+    // author: state.articles.author,
+    // description: state.articles.description,
+    // content: state.articles.content,
+    // img: state.articles.urlToImg,
+    // url: state.articles.url
+    getTopStories: state.getTopStories
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    getFunc() {
+      dispatch(
+        getTopStories()
+      )
+    }
+  }
+}
+
+const Container = connect(mapStateToProps, mapDispatchToProps)(ArticleContainer);
