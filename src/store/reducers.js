@@ -1,6 +1,11 @@
 import C from '../constants';
 import { combineReducers } from 'redux';
 
+export const getTopStories = (state=[], action) =>
+(action.type === C.FETCH_TOPSTORIES) ?
+    action.payload :
+    state;
+
 export const setArticle = (state={}, action) =>
   (action.type === C.SET_ARTICLE) ?
     action.payload :
@@ -18,6 +23,7 @@ export const errors = (state=[], action) => {
 }
 
 export default combineReducers({
+  getTopStories,
   setArticle,
   errors
 });
