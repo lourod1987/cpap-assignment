@@ -137,7 +137,7 @@ export default class ArticleContainer extends Component {
   render() {
     const { article, articles, visited, headlines, fullList } = this.state;
     return (
-      <div>
+      <React.Fragment>
         <Route exact path="/" render={ () => (
           <ArticleListPage
             headlines={headlines}
@@ -166,7 +166,7 @@ export default class ArticleContainer extends Component {
             goToArticle={this.goToArticle}
           />
         )}/>
-      </div>
+      </React.Fragment>
     );
   }
 }
