@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ArticleContainer from '../containers/ArticleContainer';
 import '../../stylesheets/App.scss';
 // import logo from '../../logo.svg';
 
-class App extends Component {
-  render() {
-    return (
-      <ArticleContainer />
-    );
-  }
+const App = () => {
+  return (
+    <ArticleContainer />
+  );
 }
 
 export default App;
