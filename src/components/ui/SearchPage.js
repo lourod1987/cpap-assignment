@@ -32,12 +32,14 @@ export default class SearchPage extends Component {
     const { query, searchResults, type } = this.state;
     const { goToArticle } = this.props;
     return (
-      <div>
+      <React.Fragment>
         <Navbar />
-        <form className="search-bar">
+        <form className="search-bar" role="search">
           <input 
-              type="text"
-              placeholder='Search'
+              type="search"
+              name="search"
+              aria-label="Search all articles"
+              placeholder="Search"
               value={query}
               onChange={ evt => this.handleSearch(evt.target.value)}
           />
@@ -46,7 +48,7 @@ export default class SearchPage extends Component {
         {(query.length === 0) ? <p className="search-instructions">Please Enter a Search Query</p> :
         <Cards cards={searchResults} goToArticle={goToArticle} type={type} /> }
         <Footer />
-      </div>
+      </React.Fragment>
     );
   }
 }
