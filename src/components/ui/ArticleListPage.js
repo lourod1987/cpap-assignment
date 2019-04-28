@@ -14,7 +14,7 @@ export default class ArticleListPage extends Component {
     const { type } = this.state;
     const { headlines, articles, goToArticle } = this.props;
     return (
-        <div>
+        <React.Fragment>
             <Navbar />
             {headlines.length === 0 ?
             null :
@@ -23,7 +23,7 @@ export default class ArticleListPage extends Component {
               (<img src={loading} className="no-results" alt="" />) :
               (<Cards cards={articles} goToArticle={goToArticle} type={type}/>)}
             <Footer />
-        </div>
+        </React.Fragment>
     );
   }
 }
