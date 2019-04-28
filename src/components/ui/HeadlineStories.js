@@ -48,7 +48,7 @@ export default class HeadlineStories extends Component {
     const { i } = this.state;
     const { headlines, goToArticle } = this.props;
     return (
-      <div>
+      <React.Fragment>
         {headlines.length === 0 ?
           (<p>Loading</p>) :
         (
@@ -69,7 +69,7 @@ export default class HeadlineStories extends Component {
               </ul>
           </div>
         )}
-      </div>
+      </React.Fragment>
     )
   }
 }
