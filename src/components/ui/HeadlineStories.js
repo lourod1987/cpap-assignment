@@ -47,6 +47,7 @@ export default class HeadlineStories extends Component {
   render() {
     const { i } = this.state;
     const { headlines, goToArticle } = this.props;
+    let articleId = headlines.map( a => a.title.split(' '));
     return (
       <React.Fragment>
         {headlines.length === 0 ?
@@ -54,7 +55,7 @@ export default class HeadlineStories extends Component {
         (
           <div className="headlines-container">
             <div className="primary-headline">
-              <Link to="/article" className="primary-head-lnk" onClick={() => goToArticle(i, "headline", null)}>
+              <Link to={`/article/${articleId[i].join('-').toLowerCase()}`}  className="primary-head-lnk" onClick={() => goToArticle(i, "headline", null)}>
                 <img src={headlines[i].urlToImage} alt="" />
                 <h2>{headlines[i].title}</h2>
               </Link>
