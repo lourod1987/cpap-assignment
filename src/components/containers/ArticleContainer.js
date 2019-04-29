@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
-// import update from 'immutability-helper';
+// import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
 import ArticleListPage from '../ui/ArticleListPage';
 import UserInfoPage from '../ui/UserInfoPage';
 import ArticlePage from '../ui/ArticlePage';
 import SearchPage from '../ui/SearchPage';
-// import { connect } from 'react-redux';
-// import { getTopStories } from '../../actions';
+import Lost from '../ui/Lost';
+import { connect } from 'react-redux';
+import { getTopStories } from '../../actions';
 
-
-export default class ArticleContainer extends Component {
+class ArticleContainer extends Component {
 
   state = {
     headlines: [],
@@ -22,15 +23,21 @@ export default class ArticleContainer extends Component {
 
   componentDidMount() {
     const apiKey = '2d2509aeb33d472da6f8f1cc4c4aa211';
-    const topStoriesUrl = `https://newsapi.org/v2/top-headlines?sources=engadget&apiKey=`;
+    // const topStoriesUrl = `https://newsapi.org/v2/top-headlines?sources=engadget&apiKey=`;
 
-    fetch(`${topStoriesUrl}${apiKey}`)
-    .then(res => res.json())
-    .then(data => {
-      this.setState({
-        headlines: data.articles,
-      })
+    console.log('Test: ', this.props);
+
+    this.setState({
+      headlines: this.props.getTopStories
     })
+
+    // fetch(`${topStoriesUrl}${apiKey}`)
+    // .then(res => res.json())
+    // .then(data => {
+    //   this.setState({
+    //     headlines: data.articles,
+    //   })
+    // })
     // .catch( error => console.log(error.message))
 
     fetch(`https://newsapi.org/v2/everything?sources=engadget&apiKey=${apiKey}`)
@@ -46,7 +53,7 @@ export default class ArticleContainer extends Component {
 
     setTimeout(() => this.setArticlesForSearch(), 800);
 
-    setTimeout(() => console.log(this.state.headlines), 800);
+    // setTimeout(() => console.log(this.state.headlines), 800);
 
   }
 
@@ -138,60 +145,48 @@ export default class ArticleContainer extends Component {
     const { article, articles, visited, headlines, fullList } = this.state;
     return (
       <React.Fragment>
-        <Route exact path="/" render={ () => (
-          <ArticleListPage
-            headlines={headlines}
-            articles={articles}
-            goToArticle={this.goToArticle}
-          />
-        )}/>
-          <Route path="/article" render={ () => (
-            <ArticlePage
-              headlines={headlines} 
-              article={article} 
-              visited={visited} 
-              setFullArticle={this.setFullArticle}
-              getIndex={this.getIndex}
-            />
-          )}/>
-        <Route path="/userinfo" render={ () => (
-          <UserInfoPage
-            visited={visited}
-            articles={articles}
-          />
-        )}/>
-        <Route path="/search" render={ () => (
-          <SearchPage
-            fullList={fullList}
-            goToArticle={this.goToArticle}
-          />
-        )}/>
+        <Router>
+          <Switch>
+            <Route exact path="/" render={ () => (
+              <ArticleListPage
+                headlines={headlines}
+                articles={articles}
+                goToArticle={this.goToArticle}
+              />
+              // <TestPage />
+            )}/>
+              <Route exact path="/article/:id" render={ () => (
+                <ArticlePage
+                  headlines={headlines} 
+                  article={article} 
+                  visited={visited} 
+                  setFullArticle={this.setFullArticle}
+                  getIndex={this.getIndex}
+                />
+              )}/>
+            <Route  exact path="/userinfo" render={ () => (
+              <UserInfoPage
+                visited={visited}
+                articles={articles}
+              />
+            )}/>
+            <Route exact path="/search" render={ () => (
+              <SearchPage
+                fullList={fullList}
+                goToArticle={this.goToArticle}
+              />
+            )}/>
+            <Route component={Lost} />
+          </Switch>
+        </Router>
       </React.Fragment>
     );
   }
 }
 
-// const mapStateToProps = state => {
-//   return {
-//     // title: state.articles.title, 
-//     // source: state.articles.source.name,
-//     // author: state.articles.author,
-//     // description: state.articles.description,
-//     // content: state.articles.content,
-//     // img: state.articles.urlToImg,
-//     // url: state.articles.url
-//     getTopStories: state.getTopStories
-//   }
-// }
-
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     getFunc() {
-//       dispatch(
-//         getTopStories()
-//       )
-//     }
-//   }
-// }
-
-// const Container = connect(mapStateToProps, mapDispatchToProps)(ArticleContainer);
+// export default ArticleContainer;
+export default connect(state => state)(ArticleContainer);
+// export default connect(
+//   null,
+//   { getTopStories }
+// )(ArticleContainer)
