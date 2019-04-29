@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+// import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './components/ui/App';
 import * as serviceWorker from './serviceWorker';
@@ -27,17 +27,17 @@ store.subscribe(saveState);
 //   setArticle("This is a crazy tech story title","Engadget", "Lou Ye", "snazzy clickbait here", "some long paragraph here", "img link here", "full article link here")
 // )
 
-store.dispatch(
-  getTopStories()
-)
+// store.dispatch(
+//   getTopStories()
+// )
 
 window.store = store;
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    {/* <BrowserRouter> */}
       <App />
-    </BrowserRouter>
+    {/* </BrowserRouter> */}
   </Provider>,
   document.getElementById('root')
 );
