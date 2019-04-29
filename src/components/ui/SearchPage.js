@@ -11,7 +11,6 @@ export default class SearchPage extends Component {
   }
 
   handleSearch = query => {
-
     let filteredSearch = this.props.fullList.filter( article => {
       return article.title.toLowerCase().includes(query.toLowerCase())
     })
@@ -21,12 +20,6 @@ export default class SearchPage extends Component {
         query
       })
   }
-
-
-
-  //in order to properly track viewed articles on search page I need compare 
-  // fullList array to currently selected article and return the matching index as an additional prop and or argument
-  // to goToArticle function within cards
 
   render() {
     const { query, searchResults, type } = this.state;
