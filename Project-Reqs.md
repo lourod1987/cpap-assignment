@@ -76,7 +76,7 @@ Building a project to meet requirements and share with team to display and expla
 
 
 ## TODO
-* Fix and Finish App styling (mobile first)
+* Fix and Finish App styling (mobile first) - **DONE**
     - Back to Top Button main page (possibly search page)
     - Back / Close button in article page
 * Create Site logo - **DONE**
@@ -100,12 +100,13 @@ Building a project to meet requirements and share with team to display and expla
     - Review code: simplify where possible
     - Ensure best practices
     - Apply functional logic throughout Application
-    - Clear all error and warning 
+    - Clear all errors and warning 
     - Write comments throughout App 
 * Rewrite Project/Repo README
 * Extras:
     - PropTypes
-    - Set dynamic routing up for each article
-    - Set up 404 Pages
+    - Set dynamic routing up for each article - **DONE**
+    - Set up 404 Pages - **DONE**
     - Implement Jest Unit and UI tests
     - lighthouse test performance (see what can be improved)
+    - Do Accessibility Audit/Testing (try axe tool in firefox)
