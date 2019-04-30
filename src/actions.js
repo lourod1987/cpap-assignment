@@ -47,7 +47,6 @@ export const getAllStories = () => dispatch => {
 }
 
 export const genTable = (topStories, articles) => {
-  // console.log("in gen Table")
   let ts = topStories.map( ts => {
     return {
       viewed: ts.title,
@@ -96,14 +95,10 @@ export const articleIndex = index => {
 }
 
 export const seenTechAggArticle = (table, index) => {
-  // console.log('seenTechAgg Index: ', index)
-  // articleIndex(index);
-  // seenFullArticle(table, index);
   let articleTable = [...table];
   let seen = {
     ...articleTable[index],
-    seen: 'True',
-    // fullArticle: 'True'
+    seen: 'True'
   }
   articleTable[index] = seen;
   return {

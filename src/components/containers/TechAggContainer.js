@@ -11,7 +11,7 @@ import { getAllStories, setArticle, articleIndex, genTable, genSearchList, seenT
 class TechAggContainer extends Component {
   componentDidMount() {
     const { dispatch, topStories, articles } = this.props;
-    console.log('Test: ', this.props);
+
     dispatch(getAllStories());
 
     setTimeout(() => dispatch(genTable(topStories, articles), 800));
@@ -84,7 +84,3 @@ class TechAggContainer extends Component {
 }
 
 export default connect(state => state)(TechAggContainer);
-// export default connect(
-//   null,
-//   { getTopStories }
-// )(ArticleContainer)

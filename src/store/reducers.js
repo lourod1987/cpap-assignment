@@ -33,7 +33,6 @@ export const errors = (state=[], action) => {
 }
 
 export const articlesTable = (state=[], action) => {
-  console.log("reducer index: ", action.payload)
   switch(action.type) {
     case C.GEN_TABLE:
       return action.payload;
@@ -58,10 +57,6 @@ export const searchList = (state=[], action) => {
 export default combineReducers({
   topStories,
   articlesTable,
-    
-  // articlesTable: combineReducers({
-    
-  // })
   searchList,
   articles,
   setArticle,

@@ -29,5 +29,4 @@ const Card = props => {
   );
 }
 
-// export default Card;
 export default connect(state => state)(Card);
