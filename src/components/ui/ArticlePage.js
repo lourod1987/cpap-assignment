@@ -4,14 +4,12 @@ import Card from './Card';
 import Footer from './Footer'
 
 const ArticlePage = props => {
-  const { headlines, article, setFullArticle } = props;
+  const { setArticle } = props;
   return (
       <React.Fragment>
           <Navbar />
-          <Card 
-            headlines={headlines} 
-            article={article} 
-            setFullArticle={setFullArticle} 
+          <Card
+            setArticle={setArticle}
           />
           <Footer />
       </React.Fragment>

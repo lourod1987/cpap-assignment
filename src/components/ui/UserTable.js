@@ -5,10 +5,10 @@ import loading from '../../imgs/transparent-loading-4.gif';
 const UserTable = props => {
   let x = 0;
   let i = -1;
-  const { visited } = props;
+  const { articlesTable } = props;
   return (
     <div>
-      {visited.length === 0 ?
+      {articlesTable.length === 0 ?
           (<img src={loading} className="no-results" alt="" />)
           :(<table>
               <thead>
@@ -20,7 +20,7 @@ const UserTable = props => {
                 </tr>
               </thead>
               <tbody>
-                {visited.map( (v) => (
+                {articlesTable.map( (v) => (
                 <tr key={`${v.viewed}&${i+=1}`}>
                   <td>{x+=1}</td>
                   <td>{v.viewed}</td>

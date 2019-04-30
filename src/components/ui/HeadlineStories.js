@@ -23,9 +23,9 @@ export default class HeadlineStories extends Component {
   }
 
   autoChange = () => {
-    const { headlines } = this.props;
+    const { topStories } = this.props;
     const { i } = this.state;
-    if (i < headlines.length - 1) {
+    if (i < topStories.length - 1) {
       this.setState( prevState => ({
         i: prevState.i += 1
       }));
@@ -46,25 +46,26 @@ export default class HeadlineStories extends Component {
 
   render() {
     const { i } = this.state;
-    const { headlines, goToArticle } = this.props;
-    let articleId = headlines.map( a => a.title.split(' '));
+    const { topStories, goToArticle } = this.props;
+    // let articleId = topStories.map( a => a.title.split(' '));
     return (
       <React.Fragment>
-        {headlines.length === 0 ?
+        {topStories.length === 0 ?
           (<p>Loading</p>) :
         (
           <div className="headlines-container">
             <div className="primary-headline">
-              <Link to={`/article/${articleId[i].join('-').toLowerCase()}`}  className="primary-head-lnk" onClick={() => goToArticle(i, "headline", null)}>
-                <img src={headlines[i].urlToImage} alt="" />
-                <h2>{headlines[i].title}</h2>
+              <Link to={`/article/${i}`}  className="primary-head-lnk" onClick={() => goToArticle(i, "headline", null)}>
+              {/* <Link to={`/article/top-stories/${articleId[i].join('-').toLowerCase()}`}  className="primary-head-lnk" onClick={() => goToArticle(i, "headline", null)}> */}
+                <img src={topStories[i].urlToImage} alt="" />
+                <h2>{topStories[i].title}</h2>
               </Link>
             </div>
               <ul className="mini-headlines">
-              {headlines.map( (headlines, index) => (
-                <li key={headlines.publishedAt}>
-                  <img src={headlines.urlToImage} alt="" className={ (i === index) ? "currentlySelected" : ""} onClick={() => this.handleClick(index)}/>
-                  {/* <h2>{headlines.title}</h2> */}
+              {topStories.map( (topStory, index) => (
+                <li key={topStory.publishedAt}>
+                  <img src={topStory.urlToImage} alt="" className={ (i === index) ? "currentlySelected" : ""} onClick={() => this.handleClick(index)}/>
+                  {/* <h2>{topStory.title}</h2> */}
                 </li>
               ))}
               </ul>

@@ -12,13 +12,13 @@ export default class ArticleListPage extends Component {
     
   render() {   
     const { type } = this.state;
-    const { headlines, articles, goToArticle } = this.props;
+    const { topStories, articles, goToArticle } = this.props;
     return (
         <React.Fragment>
             <Navbar />
-            {headlines.length === 0 ?
+            {topStories.length === 0 ?
             null :
-            (<HeadlineStories headlines={headlines} goToArticle={goToArticle}/>)}
+            (<HeadlineStories topStories={topStories} goToArticle={goToArticle}/>)}
             {articles.length === 0 ?
               (<img src={loading} className="no-results" alt="" />) :
               (<Cards cards={articles} goToArticle={goToArticle} type={type}/>)}
