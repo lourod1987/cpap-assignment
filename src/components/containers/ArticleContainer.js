@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
-// import { Route, Switch } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-
 import ArticleListPage from '../ui/ArticleListPage';
 import UserInfoPage from '../ui/UserInfoPage';
 import ArticlePage from '../ui/ArticlePage';
 import SearchPage from '../ui/SearchPage';
 import Lost from '../ui/Lost';
-import { connect } from 'react-redux';
-import { getTopStories } from '../../actions';
 
 class ArticleContainer extends Component {
 
@@ -23,22 +19,16 @@ class ArticleContainer extends Component {
 
   componentDidMount() {
     const apiKey = '2d2509aeb33d472da6f8f1cc4c4aa211';
-    // const topStoriesUrl = `https://newsapi.org/v2/top-headlines?sources=engadget&apiKey=`;
+    const topStoriesUrl = `https://newsapi.org/v2/top-headlines?sources=engadget&apiKey=`;
 
-    console.log('Test: ', this.props);
-
-    this.setState({
-      headlines: this.props.getTopStories
+    fetch(`${topStoriesUrl}${apiKey}`)
+    .then(res => res.json())
+    .then(data => {
+      this.setState({
+        headlines: data.articles,
+      })
     })
-
-    // fetch(`${topStoriesUrl}${apiKey}`)
-    // .then(res => res.json())
-    // .then(data => {
-    //   this.setState({
-    //     headlines: data.articles,
-    //   })
-    // })
-    // .catch( error => console.log(error.message))
+    .catch( error => console.log(error.message))
 
     fetch(`https://newsapi.org/v2/everything?sources=engadget&apiKey=${apiKey}`)
     .then(res => res.json())
@@ -47,7 +37,7 @@ class ArticleContainer extends Component {
         articles: data.articles,
       })
     })
-    // .catch( error => console.log(error.message))
+    .catch( error => console.log(error.message))
 
     setTimeout(() => this.visitedArticles(), 800);
 
@@ -184,9 +174,4 @@ class ArticleContainer extends Component {
   }
 }
 
-// export default ArticleContainer;
-export default connect(state => state)(ArticleContainer);
-// export default connect(
-//   null,
-//   { getTopStories }
-// )(ArticleContainer)
+export default ArticleContainer;
