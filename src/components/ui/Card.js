@@ -5,7 +5,6 @@ import { seenFullArticle } from '../../actions';
 const Card = props => {
   const { dispatch, setArticle, articleIndex, articlesTable } = props;
   // console.log("articleTable: ", articlesTable);
-  console.log("articleIndex: ", articleIndex);
   return (
     <main>
       {(Object.entries(setArticle).length === 0) ?
