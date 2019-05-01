@@ -14,7 +14,8 @@ export const clearError = index =>
 
 export const getAllStories = () => dispatch => {
   const apiKey = '2d2509aeb33d472da6f8f1cc4c4aa211';
-  const topStoriesUrl = `https://newsapi.org/v2/top-headlines?sources=engadget&apiKey=`;
+  const topStoriesUrl = 'https://newsapi.org/v2/top-headlines?sources=engadget&apiKey=';
+  const articlesUrl = 'https://newsapi.org/v2/everything?sources=engadget&apiKey=';
 
   fetch(`${topStoriesUrl}${apiKey}`)
     .then(response => response.json())
@@ -31,7 +32,7 @@ export const getAllStories = () => dispatch => {
     });
 
     
-  fetch(`https://newsapi.org/v2/everything?sources=engadget&apiKey=${apiKey}`)
+  fetch(`${articlesUrl}${apiKey}`)
     .then(res => res.json())
     .then(stories => {
       dispatch({
