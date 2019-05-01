@@ -39,14 +39,14 @@
 
 .maininfo th {
   color: $standout-clr;
-  font-family: 'Roboto Slab', serif;
+  font-family: $largeHeading-font;
   font-weight: 900;
   background: url("../imgs/dark-triangles.png") center repeat;
   // background-color: $primary-clr;
 }
 
 .maininfo td {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: $paragraph-font;
   font-weight: 600;
 }
 

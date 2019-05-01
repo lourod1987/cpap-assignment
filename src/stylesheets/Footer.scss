@@ -4,7 +4,9 @@
 ============================
 */
 footer {
-  /* margin-top: 50px; */
+  font-family: $paragraph-font;
+  padding-top: 20px;
+  margin-bottom: 20px;
   border-top: 1px solid grey;
 }
 footer ul {

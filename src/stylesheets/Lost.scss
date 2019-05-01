@@ -5,6 +5,7 @@
 ==============================
 */
 .lost-message {
+  font-family: $largeHeading-font;
   color: $accent-clr;
   text-align: center;
   margin: 30vh 50px 0 50px;
@@ -13,6 +14,7 @@
 .lost-btn {
   display: block;
   margin: 50px auto 40vh auto;
+  font-family: $fancyTech-font;
   padding: 1.5rem;
   border-radius: 15px;
   border: none;
@@ -25,6 +27,5 @@
 }
 
 .lost-btn:hover {
-  color: $standout-clr;
-  background-image: linear-gradient(0deg, $primary-clr 0%, $secondary-clr 100%);
+  background-image: linear-gradient(0deg, $primary-clr 0%, $accent-clr 100%);
 }

@@ -7,21 +7,26 @@
 }
 
 .search-bar input {
+  font-family: $paragraph-font;
+  color: $accent-clr;
   padding: 1.3rem;
   width: 100%;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
   text-align: center;
 }
 
 .search-instructions {
+  font-family: $largeHeading-font;
   text-align: center;
   font-size: 1.8rem;
   margin: 50px 0 150px 0;
   color: $accent-clr;
-  min-height: 550px;
+  min-height: 50vh;
 }
 
 .no-matching-results {
+  font-family: $largeHeading-font;
   text-align: center;
   font-size: 1.8rem;
   margin: 50px 0 150px 0;

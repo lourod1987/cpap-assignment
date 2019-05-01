@@ -5,7 +5,7 @@
 */
 header nav {
   display: grid;
-  grid-template-columns: 10px 30px 1fr 80px 10px;
+  grid-template-columns: 10px 30px 1fr 90px 10px;
   grid-template-rows: 1fr 1fr;
   row-gap: 8px;
   width: 100%;
@@ -38,7 +38,7 @@ header nav {
 
 // header nav h1 {
   // font-size: 2rem;
-  // font-family: 'Share Tech Mono', monospace;
+  // font-family: $fancyTech-font;
   // // text-shadow: -2px 2px 1px #5B850D;
   // // text-shadow: 0px 0px 3px #98DE16;
   // text-align: center;
@@ -58,7 +58,7 @@ header nav {
   -webkit-text-fill-color: transparent;
   max-width: 160px;
   font-size: 1.35rem;
-  font-family: 'Share Tech Mono', monospace;
+  font-family: $fancyTech-font;
   text-align: left;
   margin-top: 40px;
   grid-column-start: 3;
@@ -77,6 +77,7 @@ header nav {
 }
 
 .link {
+  font-family: $paragraph-font;
   text-align: center;
   text-decoration: none;
   font-size: 1.2rem;
@@ -100,6 +101,7 @@ header nav {
 }
 
 .search-link {
+  font-family: $paragraph-font;
   text-align: center;
   text-decoration: none;
   font-size: 1.2rem;

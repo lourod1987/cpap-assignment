@@ -25,7 +25,7 @@
 }
 
 .card li h2 {
-  font-family: 'Roboto Slab', serif;
+  font-family: $largeHeading-font;
   font-size: 1.5rem;
   color: $accent-clr;
   margin: 10px auto 20px auto;
@@ -33,7 +33,7 @@
 }
 
 .card li h3 {
-  font-family: 'Share Tech Mono', monospace;
+  font-family: $fancyTech-font;
   font-size: 1.3rem;
   font-weight: 300;
   color: $secondary-clr;
@@ -42,7 +42,7 @@
 }
 
 .card li p {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: $paragraph-font;
   color: $primary-clr;
   font-weight: bold;
   margin: 0 auto 0 auto;
@@ -65,6 +65,7 @@
 }
 
 .external-btn {
+  font-family: $fancyTech-font;
   font-size: 0.9rem;
   font-weight: bold;
   padding: 1.2em;
@@ -81,9 +82,9 @@
 }
 
 .external-btn:hover {
-  color: $standout-clr;
+  color: $bg-clr;
   // color: $accent-clr;
-  background-image: linear-gradient(0deg, $primary-clr 0%, $secondary-clr 100%);
+  background-image: linear-gradient(0deg, $primary-clr 0%, $accent-clr 100%);
   // background-color: $standout-clr;
   /* background-color: $accent-clr; */
   // background-image: linear-gradient(-120deg,  $standout-clr 0%, $secondary-clr 100%);

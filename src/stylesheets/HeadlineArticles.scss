@@ -35,7 +35,7 @@
 
 .primary-headline h2 {
   color: $accent-clr;
-  font-family: 'Roboto Slab', serif;
+  font-family: $largeHeading-font;
   font-size: 1.32rem;
   grid-area: 2 / 2 / span 1 / span 1;
   text-align: center;
