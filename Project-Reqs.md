@@ -88,24 +88,24 @@ Building a project to meet requirements and share with team to display and expla
 * Redo file structure - **DONE**
     - fix page link (imports) - **DONE**
 * Add in .sass and break apart css into multiple files - **DONE**
-* Implement Redux
-    - yarn add redux, redux-thunk, react-redux
-    - Create Store Folder
-        - Create Reducers File
-        - Create index.js
-    - Create Constants File
-    - Create Actions File
-    - Create initialState.json
+* Implement Redux - **DONE**
+    - yarn add redux, redux-thunk, react-redux - **DONE**
+    - Create Store Folder - **DONE**
+        - Create Reducers File - **DONE**
+        - Create index.js - **DONE**
+    - Create Constants File - **DONE**
+    - Create Actions File - **DONE**
+    - Create initialState.json - **DONE**
 * Refactor
     - Review code: simplify where possible
     - Ensure best practices
-    - Apply functional logic throughout Application
-    - Clear all errors and warning 
+    - Apply functional logic throughout Application - **DONE**
+    - Clear all errors and warning
     - Write comments throughout App 
 * Rewrite Project/Repo README
 * Extras:
     - PropTypes
-    - Set dynamic routing up for each article - **DONE**
+    - Set dynamic routing up for each article - **PARTIAL**
     - Set up 404 Pages - **DONE**
     - Implement Jest Unit and UI tests
     - lighthouse test performance (see what can be improved)
