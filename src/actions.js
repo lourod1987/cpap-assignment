@@ -46,6 +46,11 @@ export const getAllStories = () => dispatch => {
     });
 }
 
+export const setResources = (topStories, articles) => dispatch => {
+    dispatch(genTable(topStories, articles));
+    dispatch(genSearchList(topStories, articles));
+}
+
 export const genTable = (topStories, articles) => {
   let ts = topStories.map( ts => {
     return {
@@ -87,7 +92,6 @@ export const setArticle = article => {
 }
 
 export const articleIndex = index => {
-  console.log('action articleIndex: ', index)
   return {
     type: C.SET_ARTICLE_INDEX,
     payload: index
@@ -141,18 +145,5 @@ export const seenFullArticle = (table, index) => {
 //     default:
 //       addError("An error has occurred. Reached a case that should never happen");
 //   }
-
-//   let visited = [...this.state.visited];
-//     let visit = {
-//       ...visited[index],
-//       seen: 'True'
-//     }
-//     visited[index] = visit;
-    
-//     this.setState({
-//       article: this.props.setArticle,
-//       visited,
-//       i: index
-//     });
 // }
 
