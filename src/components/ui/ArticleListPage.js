@@ -20,3 +20,5 @@ export const  ArticleListPage = props => {
       </React.Fragment>
   );
 }
+
+export default ArticleListPage;
