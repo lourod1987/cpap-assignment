@@ -6,17 +6,19 @@ import ArticlePage from '../ui/ArticlePage';
 import SearchPage from '../ui/SearchPage';
 import Lost from '../ui/Lost';
 import { connect } from 'react-redux';
-import { getAllStories, setArticle, articleIndex, genTable, genSearchList, seenTechAggArticle } from '../../actions';
+import { getAllStories, setArticle, articleIndex, seenTechAggArticle, setResources } from '../../actions';
 
 class TechAggContainer extends Component {
   componentDidMount() {
-    const { dispatch, topStories, articles } = this.props;
-
+    const { dispatch } = this.props;
     dispatch(getAllStories());
 
-    setTimeout(() => dispatch(genTable(topStories, articles), 800));
+    setTimeout(() => this.disResource(), 800);
+  }
 
-    setTimeout(() => dispatch(genSearchList(topStories, articles), 800));
+  disResource = () => {
+    const { dispatch, topStories, articles } = this.props;
+    dispatch(setResources(topStories, articles));
   }
 
   goToArticle = (index, type, title) => {
