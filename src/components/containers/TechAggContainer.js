@@ -5,6 +5,7 @@ import UserInfoPage from '../ui/UserInfoPage';
 import ArticlePage from '../ui/ArticlePage';
 import SearchPage from '../ui/SearchPage';
 import Lost from '../ui/Lost';
+import ScrollToTop from '../ui/ScrollToTop';
 import { connect } from 'react-redux';
 import { getAllStories, setArticle, articleIndex, seenTechAggArticle, setResources } from '../../actions';
 
@@ -53,32 +54,34 @@ class TechAggContainer extends Component {
     return (
       <React.Fragment>
         <Router>
-          <Switch>
-            <Route exact path="/" render={ () => (
-              <ArticleListPage
-                topStories={topStories}
-                articles={articles}
-                goToArticle={this.goToArticle}
-              />
-            )}/>
-              <Route exact path="/article/:id" render={ () => (
-                <ArticlePage
-                  setArticle={setArticle}
+          <ScrollToTop>
+            <Switch>
+              <Route exact path="/" render={ () => (
+                <ArticleListPage
+                  topStories={topStories}
+                  articles={articles}
+                  goToArticle={this.goToArticle}
                 />
               )}/>
-            <Route  exact path="/userinfo" render={ () => (
-              <UserInfoPage
-                articlesTable={articlesTable}
-              />
-            )}/>
-            <Route exact path="/search" render={ () => (
-              <SearchPage
-                searchList={searchList}
-                goToArticle={this.goToArticle}
-              />
-            )}/>
-            <Route component={Lost} />
-          </Switch>
+                <Route exact path="/article/:id" render={ () => (
+                  <ArticlePage
+                    setArticle={setArticle}
+                  />
+                )}/>
+              <Route  exact path="/userinfo" render={ () => (
+                <UserInfoPage
+                  articlesTable={articlesTable}
+                />
+              )}/>
+              <Route exact path="/search" render={ () => (
+                <SearchPage
+                  searchList={searchList}
+                  goToArticle={this.goToArticle}
+                />
+              )}/>
+              <Route component={Lost} />
+            </Switch>
+          </ScrollToTop>
         </Router>
       </React.Fragment>
     );
