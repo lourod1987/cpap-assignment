@@ -1,18 +1,9 @@
 {
-  "headlines": [],
-  "articles": [
-    {
-      "author": "AJ Dellinger",
-      "title": "MGM is somehow making a live-action movie about the View-Master",
-      "description": "If you have fond memories of playing with a View-Master as a kid, Mattel is hoping to cash in on your nostalgia. The toy maker is teaming up with media company MGM to produce a live-action film based on the classic stereoscope toy. Details on the fil...",
-      "url": "https://www.engadget.com/2019/02/27/view-master-live-action-movie/",
-      "urlToImage": "https://o.aolcdn.com/images/dims?thumbnail=1200%2C630&quality=80&image_uri=https%3A%2F%2Fo.aolcdn.com%2Fimages%2Fdims%3Fcrop%3D5760%252C3840%252C0%252C0%26quality%3D85%26format%3Djpg%26resize%3D1600%252C1067%26image_uri%3Dhttps%253A%252F%252Fs.yimg.com%252Fos%252Fcreatr-images%252F2019-02%252F39450990-3ab8-11e9-b7fb-972443f383e5%26client%3Da1acac3e1b3290917d92%26signature%3D729621cf335326bcf7e75262307d4dbf8a74f2b5&client=amp-blogside-v2&signature=6ce32437028619df18f06b53f4973d19bf3fefa7",
-      "publishedAt": "2019-02-28T02:11:00Z",
-      "content": "Mattel's View-Master is a toy that has hit just about every generation of kid for the better part of the last century. It was first introduced in 1939 and has undergone a number of transformations and modernization efforts over the last few years. Most recent… [+601 chars]"
-    }
-  ],
-  "fullList": [],
-  "article": {},
-  "visited": [],
-  "errors": []
+  "articleIndex": 0,
+  "articles": [],
+  "articlesTable": [],
+  "errors": [],
+  "searchList": [],
+  "setArticle": {},
+  "topStories": []
 }
