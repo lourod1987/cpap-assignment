@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import UserTable from './UserTable';
 import Footer from './Footer';
+import PropTypes from 'prop-types';
 
 const UserInfoPage = props => {
   const { articlesTable } = props;
@@ -15,6 +16,10 @@ const UserInfoPage = props => {
       <Footer />
     </React.Fragment>
   );
+}
+
+UserInfoPage.propTypes = {
+  articlesTable: PropTypes.array.isRequired
 }
 
 export default UserInfoPage;

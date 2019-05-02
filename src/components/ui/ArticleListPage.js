@@ -4,8 +4,9 @@ import HeadlineStories from './HeadlineStories';
 import Cards from './Cards';
 import Footer from './Footer';
 import loading from '../../imgs/transparent-loading-4.gif';
+import PropTypes from 'prop-types';
 
-export const  ArticleListPage = props => {
+const  ArticleListPage = props => {
   const { topStories, articles, goToArticle } = props;
   return (
       <React.Fragment>
@@ -19,6 +20,12 @@ export const  ArticleListPage = props => {
           <Footer />
       </React.Fragment>
   );
+}
+
+ArticleListPage.propTypes = {
+  topStories: PropTypes.array.isRequired,
+  articles: PropTypes.array.isRequired,
+  goToArticle: PropTypes.func.isRequired
 }
 
 export default ArticleListPage;

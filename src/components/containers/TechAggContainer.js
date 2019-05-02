@@ -7,7 +7,8 @@ import SearchPage from '../ui/SearchPage';
 import Lost from '../ui/Lost';
 import ScrollToTop from '../ui/ScrollToTop';
 import { connect } from 'react-redux';
-import { getAllStories, setArticle, articleIndex, seenTechAggArticle, setResources } from '../../actions';
+import { getAllStories, setArticle, articleIndex, seenTechAggArticle, setResources } from '../../redux/actions';
+import PropTypes from 'prop-types';
 
 class TechAggContainer extends Component {
   componentDidMount() {
@@ -86,6 +87,14 @@ class TechAggContainer extends Component {
       </React.Fragment>
     );
   }
+}
+
+TechAggContainer.propTypes = {
+  topStories: PropTypes.array.isRequired, 
+  articles: PropTypes.array.isRequired, 
+  articlesTable: PropTypes.array.isRequired,
+  searchList: PropTypes.array.isRequired, 
+  setArticle: PropTypes.object.isRequired
 }
 
 export default connect(state => state)(TechAggContainer);

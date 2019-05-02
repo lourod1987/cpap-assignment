@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import Navbar from './Navbar';
 import Cards from './Cards';
 import Footer from './Footer';
+import PropTypes from 'prop-types';
 
-export default class SearchPage extends Component {
+class SearchPage extends Component {
   state = {
     query: '',
     searchResults: []
@@ -44,3 +45,9 @@ export default class SearchPage extends Component {
     );
   }
 }
+
+SearchPage.propTypes = {
+  goToArticle: PropTypes.func.isRequired
+}
+
+export default SearchPage;

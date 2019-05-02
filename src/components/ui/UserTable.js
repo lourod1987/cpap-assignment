@@ -1,10 +1,9 @@
 import React from 'react';
 import loading from '../../imgs/transparent-loading-4.gif';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const UserTable = props => {
   let x = 0;
-  let i = -1;
   const { articlesTable } = props;
   return (
     <div>
@@ -20,12 +19,12 @@ const UserTable = props => {
                 </tr>
               </thead>
               <tbody>
-                {articlesTable.map( (v) => (
-                <tr key={`${v.viewed}&${i+=1}`}>
+                {articlesTable.map( article => (
+                <tr key={`${article.viewed}&${x}`}>
                   <td>{x+=1}</td>
-                  <td>{v.viewed}</td>
-                  <td>{v.seen}</td>
-                  <td>{v.fullArticle}</td>
+                  <td>{article.viewed}</td>
+                  <td>{article.seen}</td>
+                  <td>{article.fullArticle}</td>
                 </tr>
                 ))}
               </tbody>
@@ -34,9 +33,8 @@ const UserTable = props => {
   )
 }
 
-// UserTable.propTypes = {
-
-// }
+UserTable.propTypes = {
+  articlesTable: PropTypes.array.isRequired,
+}
 
 export default UserTable;
-

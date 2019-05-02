@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Cards = props => {
   const { cards, goToArticle, type } = props;
@@ -20,7 +21,6 @@ const Cards = props => {
                 <h2>{article.title}</h2>
                 <h3>{`${article.source.name} - ${article.author}`}</h3>
                 <p>{article.description}</p>
-                {/* <p>{article.content}</p> */}
               </Link>
             </li>
           ))}
@@ -28,6 +28,12 @@ const Cards = props => {
       </main>
     </div>
   );
+}
+
+Cards.propTypes = {
+  cards: PropTypes.array.isRequired,
+  goToArticle: PropTypes.func.isRequired,
+  type: PropTypes.string.isRequired
 }
 
 export default Cards;

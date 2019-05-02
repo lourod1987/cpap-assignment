@@ -1,7 +1,8 @@
 import React from 'react';
 import Navbar from './Navbar';
 import Card from './Card';
-import Footer from './Footer'
+import Footer from './Footer';
+import PropTypes from 'prop-types';
 
 const ArticlePage = props => {
   const { setArticle } = props;
@@ -14,6 +15,10 @@ const ArticlePage = props => {
           <Footer />
       </React.Fragment>
   );
+}
+
+ArticlePage.propTypes = {
+  setArticle: PropTypes.object.isRequired
 }
 
 export default ArticlePage;

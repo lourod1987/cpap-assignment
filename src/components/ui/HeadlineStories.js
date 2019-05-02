@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-export default class HeadlineStories extends Component {
+class HeadlineStories extends Component {
   state = {
     i: 0,
   }
@@ -75,3 +76,10 @@ export default class HeadlineStories extends Component {
     )
   }
 }
+
+HeadlineStories.propTypes = {
+  topStories: PropTypes.array.isRequired,
+  goToArticle: PropTypes.func.isRequired
+}
+
+export default HeadlineStories;
