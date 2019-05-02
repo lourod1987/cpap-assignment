@@ -1,3 +1,4 @@
+/* This component is no longer in use but served as the React setup for this project */
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import ArticleListPage from '../ui/ArticleListPage';
