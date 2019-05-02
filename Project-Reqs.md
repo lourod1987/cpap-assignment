@@ -100,11 +100,11 @@ Building a project to meet requirements and share with team to display and expla
     - Review code: simplify where possible
     - Ensure best practices
     - Apply functional logic throughout Application - **DONE**
-    - Clear all errors and warning
+    - Clear all errors and warnings
     - Write comments throughout App 
 * Rewrite Project/Repo README
 * Extras:
-    - PropTypes
+    - PropTypes - **DONE**
     - Set dynamic routing up for each article - **PARTIAL**
     - Set up 404 Pages - **DONE**
     - Implement Jest Unit and UI tests
