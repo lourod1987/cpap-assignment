@@ -44,42 +44,5 @@
 }
 
 .mini-headlines {
-  display: flex;
-  list-style: none;
-  /* grid-area: 3 / 2 / span 1 / span 5; */
-  /* row-gap: 30px; */
-  column-gap: 8px;
-  max-width: 95%;
-  // background: $accent-clr;
-  // background: $primary-clr;
-  border-radius: 15px;
-  margin: 80px auto 0 auto;
-  padding: 0.2rem;
-  justify-content: center;
+  display: none;
 }
-
-.mini-headlines img {
-  // border: 3px solid $primary-clr;
-  border-radius: 5px;
-  margin-top: 0;
-  min-height: 50px;
-  width: 100%;
-  height: auto;
-  cursor: pointer;
-}
-
-.currentlySelected {
-  border: 4px inset $standout-clr;
-}
-
-.mini-headlines img:hover {
-  border: 4px solid $standout-clr;
-}
-
-.mini-headlines img:focus {
-  border: 5px solid $standout-clr;
-}
-
-/* .mini-headlines h2 {
-  font-size: 0.8rem;
-} */
