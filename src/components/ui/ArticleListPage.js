@@ -5,6 +5,7 @@ import Cards from './Cards';
 import Footer from './Footer';
 import loading from '../../imgs/transparent-loading-4.gif';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 const  ArticleListPage = props => {
   const { topStories, articles, goToArticle } = props;
@@ -28,4 +29,11 @@ ArticleListPage.propTypes = {
   goToArticle: PropTypes.func.isRequired
 }
 
-export default ArticleListPage;
+const mapStateToProps = state => {
+  return {
+    topStories: state.topStories,
+    articles: state.articles,
+  }
+}
+
+export default connect(mapStateToProps)(ArticleListPage);

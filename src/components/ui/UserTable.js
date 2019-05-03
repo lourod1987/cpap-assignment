@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import loading from '../../imgs/transparent-loading-4.gif';
 import PropTypes from 'prop-types';
 
@@ -37,4 +38,10 @@ UserTable.propTypes = {
   articlesTable: PropTypes.array.isRequired,
 }
 
-export default UserTable;
+const mapStateToProps = state => {
+  return {
+  articlesTable: state.articlesTable,
+  }
+};
+
+export default connect(mapStateToProps)(UserTable);

@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Cards from './Cards';
 import Footer from './Footer';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 class SearchPage extends Component {
   state = {
@@ -13,12 +14,12 @@ class SearchPage extends Component {
   handleSearch = query => {
     let filteredSearch = this.props.searchList.filter( article => {
       return article.title.toLowerCase().includes(query.toLowerCase())
-    })
+    });
 
     this.setState({
         searchResults: filteredSearch,
         query
-      })
+      });
   }
 
   render() {
@@ -47,7 +48,14 @@ class SearchPage extends Component {
 }
 
 SearchPage.propTypes = {
+  searchList: PropTypes.array.isRequired,
   goToArticle: PropTypes.func.isRequired
 }
 
-export default SearchPage;
+const mapStateToProps = state => {
+  return {
+  searchList: state.searchList
+  }
+};
+
+export default connect(mapStateToProps)(SearchPage);

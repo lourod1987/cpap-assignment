@@ -12,32 +12,31 @@ import PropTypes from 'prop-types';
 
 class TechAggContainer extends Component {
   componentDidMount() {
-    const { dispatch } = this.props;
-    dispatch(getAllStories());
-
+    const { fetchData } = this.props;
+    fetchData();
     setTimeout(() => this.disResource(), 800);
   }
 
   disResource = () => {
-    const { dispatch, topStories, articles } = this.props;
-    dispatch(setResources(topStories, articles));
+    const { topStories, articles, buildNewArrays } = this.props;
+    buildNewArrays(topStories, articles);
   }
 
   goToArticle = (index, type, title) => {
-    const { dispatch, searchList, articlesTable } = this.props;
+    const { searchList, articlesTable, viewArticle, setSeenArticle, curArticleNum } = this.props;
     switch (type) {
       case "headline":
-        dispatch(setArticle(searchList[index]));
+        viewArticle(searchList[index]);
         break;
       case "main":
         index += 5;
-        dispatch(setArticle(searchList[index]));
+        viewArticle(searchList[index]);
         break;
       case "search":
         for (let i = 0; i < searchList.length; i++){
           if (searchList[i].title === title) {
             index = i;
-            dispatch(setArticle(searchList[index]));
+            viewArticle(searchList[index]);
             break;
           }
         }
@@ -46,12 +45,11 @@ class TechAggContainer extends Component {
         console.error("An error has occurred");
     }
 
-    dispatch(articleIndex(index));
-    dispatch(seenTechAggArticle(articlesTable, index));    
+    curArticleNum(index);
+    setSeenArticle(articlesTable, index);
   }
 
   render() {
-    const { topStories, articles, articlesTable, searchList, setArticle } = this.props;
     return (
       <React.Fragment>
         <Router>
@@ -59,24 +57,13 @@ class TechAggContainer extends Component {
             <Switch>
               <Route exact path="/" render={ () => (
                 <ArticleListPage
-                  topStories={topStories}
-                  articles={articles}
                   goToArticle={this.goToArticle}
                 />
               )}/>
-                <Route exact path="/article/:id" render={ () => (
-                  <ArticlePage
-                    setArticle={setArticle}
-                  />
-                )}/>
-              <Route  exact path="/userinfo" render={ () => (
-                <UserInfoPage
-                  articlesTable={articlesTable}
-                />
-              )}/>
+                <Route exact path="/article/:id" render={ArticlePage} />
+              <Route  exact path="/userinfo" component={UserInfoPage} />
               <Route exact path="/search" render={ () => (
                 <SearchPage
-                  searchList={searchList}
                   goToArticle={this.goToArticle}
                 />
               )}/>
@@ -97,4 +84,44 @@ TechAggContainer.propTypes = {
   setArticle: PropTypes.object.isRequired
 }
 
-export default connect(state => state)(TechAggContainer);
+const mapStateToProps = state => {
+  return {
+  topStories: state.topStories,
+  articles: state.articles,
+  articlesTable: state.articlesTable,
+  searchList: state.searchList,
+  setArticle: state.setArticle
+  }
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchData() {
+      dispatch(
+        getAllStories()
+      )
+    }, 
+    viewArticle(object) {
+      dispatch(
+        setArticle(object)
+      )
+    }, 
+    curArticleNum(index) {
+      dispatch(
+        articleIndex(index)
+      )
+    }, 
+    setSeenArticle(table, index) {
+      dispatch(
+        seenTechAggArticle(table, index)
+      )
+    }, 
+    buildNewArrays(array1, array2) {
+      dispatch(
+        setResources(array1, array2)
+      )
+    }
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(TechAggContainer);

@@ -1,17 +1,17 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { seenFullArticle } from '../../redux/actions';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 const Card = props => {
-  const { dispatch, setArticle, articleIndex, articlesTable } = props;
+  const { setArticle, articleIndex, articlesTable, clickFullArticle } = props;
   return (
     <main>
       {(Object.entries(setArticle).length === 0) ?
       <h3 className="refresh-warn">Start from homepage to load an individual article</h3> : (
         <ul className="card">
           <li>
-            <a href={setArticle.url} target="_blank" rel="noopener noreferrer" onClick={() => dispatch(seenFullArticle(articlesTable, articleIndex))}>
+            <a href={setArticle.url} target="_blank" rel="noopener noreferrer" onClick={() => clickFullArticle(articlesTable, articleIndex)}>
               <img src={setArticle.urlToImage} alt=""/>
             </a>
             <h2>{setArticle.title}</h2>
@@ -20,7 +20,7 @@ const Card = props => {
             <p>{`${setArticle.content}`}</p>
           </li>
           <a href={setArticle.url} target="_blank" rel="noopener noreferrer" className="external-lnk">
-            <button className="external-btn" onClick={() => dispatch(seenFullArticle(articlesTable, articleIndex))}>View on Engagdet</button>
+            <button className="external-btn" onClick={() => clickFullArticle(articlesTable, articleIndex)}>View on Engadget</button>
           </a>
         </ul>
       )}
@@ -31,7 +31,26 @@ const Card = props => {
 Card.propTypes = {
   setArticle: PropTypes.object.isRequired,
   articleIndex: PropTypes.number.isRequired,
-  articlesTable: PropTypes.array.isRequired
+  articlesTable: PropTypes.array.isRequired,
+  clickFullArticle: PropTypes.func.isRequired
 }
 
-export default connect(state => state)(Card);
+const mapStateToProps = state => {
+  return {
+    setArticle: state.setArticle,
+    articleIndex: state.articleIndex,
+    articlesTable: state.articlesTable,
+  }
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    clickFullArticle(table, index) {
+      dispatch(
+        seenFullArticle(table, index)
+      )
+    }
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Card);
