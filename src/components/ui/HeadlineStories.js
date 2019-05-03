@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import MobileMiniHeadlines from './MobileMiniHeadlines';
 import PropTypes from 'prop-types';
 
 class HeadlineStories extends Component {
   state = {
     i: 0,
+    circleArr: [
+      '',
+      '',
+      '',
+      '',
+      ''
+    ]
   }
 
   componentDidMount() {
@@ -46,7 +54,7 @@ class HeadlineStories extends Component {
   }
 
   render() {
-    const { i } = this.state;
+    const { i, circleArr } = this.state;
     const { topStories, goToArticle } = this.props;
     // let articleId = topStories.map( a => a.title.split(' '));
     return (
@@ -62,6 +70,7 @@ class HeadlineStories extends Component {
                 <h2>{topStories[i].title}</h2>
               </Link>
             </div>
+              <MobileMiniHeadlines  circleArr={circleArr}  i={i} handleClick={this.handleClick} />
               <ul className="mini-headlines">
               {topStories.map( (topStory, index) => (
                 <li key={topStory.publishedAt}>
