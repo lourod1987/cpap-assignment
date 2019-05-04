@@ -24,7 +24,6 @@ class SearchPage extends Component {
 
   render() {
     const { query, searchResults } = this.state;
-    const { goToArticle } = this.props;
     return (
       <React.Fragment>
         <Navbar />
@@ -40,7 +39,7 @@ class SearchPage extends Component {
         </form>
         {(query.length > 0 && searchResults.length === 0 ) ? <p className="no-matching-results">No Results Match Your Query</p> : null }
         {(query.length === 0) ? <p className="search-instructions">Please Enter a Search Query</p> :
-        <Cards cards={searchResults} goToArticle={goToArticle} type="search" /> }
+        <Cards cards={searchResults} type="search" /> }
         <Footer />
       </React.Fragment>
     );
@@ -49,7 +48,6 @@ class SearchPage extends Component {
 
 SearchPage.propTypes = {
   searchList: PropTypes.array.isRequired,
-  goToArticle: PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => {

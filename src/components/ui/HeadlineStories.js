@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import MobileMiniHeadlines from './MobileMiniHeadlines';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { goToArticle } from '../../redux/actions';
 
 class HeadlineStories extends Component {
   state = {
@@ -55,7 +57,7 @@ class HeadlineStories extends Component {
 
   render() {
     const { i, circleArr } = this.state;
-    const { topStories, goToArticle } = this.props;
+    const { topStories, goArticle } = this.props;
     // let articleId = topStories.map( a => a.title.split(' '));
     return (
       <React.Fragment>
@@ -64,7 +66,7 @@ class HeadlineStories extends Component {
         (
           <div className="headlines-container">
             <div className="primary-headline">
-              <Link to={`/article/${i}`}  className="primary-head-lnk" onClick={() => goToArticle(i, "headline", null)}>
+              <Link to={`/article/${i}`}  className="primary-head-lnk" onClick={() => goArticle(i, "headline", null)}>
               {/* <Link to={`/article/top-stories/${articleId[i].join('-').toLowerCase()}`}  className="primary-head-lnk" onClick={() => goToArticle(i, "headline", null)}> */}
                 <img src={topStories[i].urlToImage} alt="" />
                 <h2>{topStories[i].title}</h2>
@@ -88,7 +90,21 @@ class HeadlineStories extends Component {
 
 HeadlineStories.propTypes = {
   topStories: PropTypes.array.isRequired,
-  goToArticle: PropTypes.func.isRequired
+  goArticle: PropTypes.func.isRequired
 }
 
-export default HeadlineStories;
+const mapStateToProps = null;
+
+const mapDispatchToProps = dispatch => {
+  return {
+    goArticle(index, type, title) {
+      dispatch(
+        goToArticle(index, type, title)
+      )
+    }
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(HeadlineStories);
+
+// export default HeadlineStories;

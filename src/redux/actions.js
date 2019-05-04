@@ -125,26 +125,37 @@ export const seenFullArticle = (table, index) => {
   }
 }
 
-// export const goToArticle = (index, type, title, topStories, articles, searchList) => {
-//   switch (type) {
-//     case "headline":
-//      setArticle(topStories[index]);
-//       break;
-//     case "main":
-//       setArticle(articles[index]);
-//       index += 5;
-//       break;
-//     case "search":
-//       for (let i = 0; i < searchList.length; i++){
-//         if (searchList[i].title === title) {
-//           index = i;
-//           setArticle(searchList[index]);
-//           break;
-//         }
-//       }
-//       break;
-//     default:
-//       addError("An error has occurred. Reached a case that should never happen");
-//   }
-// }
+export const goToArticle = (index, type, title) => (dispatch, getState) => {
+  console.log("index from goToArticle: ", type)
+  const state = getState();
+  switch (type) {
+    case "headline":
+     dispatch(setArticle(state.topStories[index]));
+      break;
+    case "main":
+      dispatch(setArticle(state.articles[index]));
+      index += 5;
+      break;
+    case "search":
+      // searchList.map( (article, i) => {
+      //       //   if (article.title === title) {
+      //       //     index = i;
+      //       //     viewArticle(article);
+      //       //   }
+      //       // })
+      for (let i = 0; i < state.searchList.length; i++){
+        if (state.searchList[i].title === title) {
+          index = i;
+          dispatch(setArticle(state.searchList[index]));
+          break;
+        }
+      }
+      break;
+    default:
+      dispatch(addError("An error has occurred. Reached a case that should never happen"));
+  }
+
+  dispatch(articleIndex(index));
+  dispatch(seenTechAggArticle(state.articlesTable, index));
+}
 

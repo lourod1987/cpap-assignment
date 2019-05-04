@@ -8,16 +8,16 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 const  ArticleListPage = props => {
-  const { topStories, articles, goToArticle } = props;
+  const { topStories, articles } = props;
   return (
       <React.Fragment>
           <Navbar />
           {topStories.length === 0 ?
           null :
-          (<HeadlineStories topStories={topStories} goToArticle={goToArticle}/>)}
+          (<HeadlineStories topStories={topStories} />)}
           {articles.length === 0 ?
             (<img src={loading} className="no-results" alt="" />) :
-            (<Cards cards={articles} goToArticle={goToArticle} type="main" />)}
+            (<Cards cards={articles} type="main" />)}
           <Footer />
       </React.Fragment>
   );
@@ -26,7 +26,6 @@ const  ArticleListPage = props => {
 ArticleListPage.propTypes = {
   topStories: PropTypes.array.isRequired,
   articles: PropTypes.array.isRequired,
-  goToArticle: PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => {

@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { goToArticle } from '../../redux/actions';
 
 const Cards = props => {
-  const { cards, goToArticle, type } = props;
+  const { cards, goArticle, type } = props;
 
   // let articleId = cards.map( a => a.title.split(' '));
   // let articleLink = articleId.toLowerCase();
@@ -14,7 +16,7 @@ const Cards = props => {
         <ul className="cards">
           {cards.map( (article, index) => 
             (
-            <li key={`${article.publishedAt}+${index}`} onClick={() => goToArticle(index, type, article.title)}>
+            <li key={`${article.publishedAt}+${index}`} onClick={() => goArticle(index, type, article.title)}>
               <Link to={`/article/${index}`}>
               {/* <Link to={`/article/${articleId[index].join('-').toLowerCase()}`} className="article-lnk"> */}
                 <img src={article.urlToImage} alt=""/>
@@ -32,8 +34,21 @@ const Cards = props => {
 
 Cards.propTypes = {
   cards: PropTypes.array.isRequired,
-  goToArticle: PropTypes.func.isRequired,
+  goArticle: PropTypes.func.isRequired,
   type: PropTypes.string.isRequired
 }
 
-export default Cards;
+const mapStateToProps = null;
+
+const mapDispatchToProps = dispatch => {
+  return {
+    goArticle(index, type, title) {
+      dispatch(
+        goToArticle(index, type, title)
+      )
+    }
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cards);
+// export default Cards;
