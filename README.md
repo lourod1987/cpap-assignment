@@ -1,3 +1,25 @@
+# TechAgg App
+
+This application displays technology news articles fetched from the Engadget API. Articles are searchable and current user data, whether an article has been viewed or visited on Engadget is tracked. 
+Most of the application data is managed using Redux.
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Some of Create-React-App's README information that is useful to running this project can be found below.
+
+# Run the application
+1. To retrieve the files you can clone the repository from this page.
+* If you are downloading the files, unzip them, and extract the files to where you want them in your directory.
+2. CD into the directory where the root folder of the application is and run 'npm install' in your terminal or cmd line.
+3. Now run 'npm start' to run a live version of the application in development mode.
+    This will automatically open a new window in your default browser at http://localhost:3000.
+* Alternatively you can visit the live link to this app [here](https://techagg.netlify.com/).
+
+
+## Dependencies
+
+This Web application was built with React, React Router, Redux, and SCSS. All required dependencies can be found in the package.json.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -42,27 +64,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
