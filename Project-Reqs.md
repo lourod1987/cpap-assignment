@@ -77,10 +77,7 @@ Building a project to meet requirements and share with team to display and expla
 
 ## TODO
 * Fix and Finish App styling (mobile first) - **DONE**
-    - Back to Top Button main page (possibly search page)
-    - Back / Close button in article page
 * Create Site logo - **DONE**
-* Set up dynamic animations for scrolling, hovering, clicking across
 * Highlighting for currently selected top article (css border around currently selected) - **DONE**
 * Get full list of articles on table of UserInfo page - **DONE**
 * stop interval for autoChange onClick and then start again - **DONE**
@@ -96,13 +93,13 @@ Building a project to meet requirements and share with team to display and expla
     - Create Constants File - **DONE**
     - Create Actions File - **DONE**
     - Create initialState.json - **DONE**
-* Refactor
-    - Review code: simplify where possible
-    - Ensure best practices
+* Refactor - **DONE**
+    - Review code: simplify where possible - **DONE**
+    - Ensure best practices - **DONE**
     - Apply functional logic throughout Application - **DONE**
-    - Clear all errors and warnings
+    - Clear all errors and warnings - **DONE**
     - Write comments throughout App 
-* Rewrite Project/Repo README
+* Rewrite Project/Repo README - **DONE**
 * Extras:
     - PropTypes - **DONE**
     - Set dynamic routing up for each article - **PARTIAL**
@@ -110,3 +107,8 @@ Building a project to meet requirements and share with team to display and expla
     - Implement Jest Unit and UI tests
     - lighthouse test performance (see what can be improved)
     - Do Accessibility Audit/Testing (try axe tool in firefox)
+    - Back to Top Button main page (possibly search page)
+    - Back / Close button in article page
+    - Add in additional news sources like TechCrunch
+    - Add in favorites feature to store articles to a users own list
+    - Set up dynamic animations for scrolling, hovering, clicking across
