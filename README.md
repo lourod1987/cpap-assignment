@@ -10,8 +10,8 @@ Some of Create-React-App's README information that is useful to running this pro
 # Run the application
 1. To retrieve the files you can clone the repository from this page.
 * If you are downloading the files, unzip them, and extract the files to where you want them in your directory.
-2. CD into the directory where the root folder of the application is and run 'npm install' in your terminal or cmd line.
-3. Now run 'npm start' to run a live version of the application in development mode.
+2. CD into the directory where the root folder of the application is and run 'yarn install' or 'npm install' in your terminal or cmd line.
+3. Now run 'yarn start' or 'npm start' to run a live version of the application in development mode.
     This will automatically open a new window in your default browser at http://localhost:3000.
 * Alternatively you can visit the live link to this app [here](https://techagg.netlify.com/).
 
@@ -19,6 +19,8 @@ Some of Create-React-App's README information that is useful to running this pro
 ## Dependencies
 
 This Web application was built with React, React Router, Redux, and SCSS. All required dependencies can be found in the package.json.
+
+*Note*: Project initially used **yarn** to manage packages.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
