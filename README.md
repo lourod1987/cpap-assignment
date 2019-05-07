@@ -1,5 +1,7 @@
 # TechAgg App
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0b45c2de-353e-4e67-bda5-e4af2b05dc7c/deploy-status)](https://app.netlify.com/sites/techagg/deploys)
+
 This application displays technology news articles fetched from the Engadget API. Articles are searchable and current user data, whether an article has been viewed or visited on Engadget is tracked. 
 Most of the application data is managed using Redux.
 
