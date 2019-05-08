@@ -15,11 +15,6 @@
 }
 
 .main-cards-board {
-  // background-color: $bg-clr;
-  // background-color: $primary-clr;
-  // background-color: $primary-clr;
-  // background: linear-gradient(90deg,  $secondary-clr 0%, $standout-clr 100%);
-  // background: linear-gradient(-90deg, $standout-clr 0%, #008552 100%);
   width: 100%;
   margin: 0 auto 0 auto;
 }
@@ -27,7 +22,6 @@
 .cards {
   display: inline;
   padding: 0;
-  // margin-top: 50px;
 }
 
 .cards li {
@@ -39,7 +33,6 @@
   border-bottom: solid 4px $secondary-clr;
   text-align: left;
   background-color: #FFFFFF;
-  /* background: url("./dark-triangles.png") repeat fixed; */
 }
 
 .cards li img {
@@ -73,16 +66,11 @@
   word-wrap: break-word;
   color: $primary-clr;
   margin: 10px 0 30px 0;
-  /* color: white; */
 }
 
 .article-lnk {
   text-decoration: none;
 }
-
-/* .article-lnk:visited {
-  color: black;
-} */
 
 .cards li:hover {
   box-shadow:  5px 5px 8px $primary-clr;

@@ -6,7 +6,6 @@
 .maininfo {
   padding-top: 70px;
   margin-bottom: 50px;
-  /* max-width: 90%; */
 }
 
 .maininfo h2 {
@@ -31,7 +30,6 @@
 
 .maininfo table, th, td {
   max-width: 90%;
-  /* border: solid 1px black; */
   margin: 30px auto 0 auto;
   text-align: center;
   padding: 10px;
@@ -42,7 +40,6 @@
   font-family: $largeHeading-font;
   font-weight: 900;
   background: url("../imgs/dark-triangles.png") center repeat;
-  // background-color: $primary-clr;
 }
 
 .maininfo td {
@@ -53,6 +50,4 @@
 tbody {
   color: $primary-clr;
   background-color: rgb(224, 231, 229);
-  // background-color: $secondary-clr;
-  // background-color: #5DBA9D;
 }

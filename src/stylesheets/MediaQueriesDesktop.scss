@@ -1,0 +1,145 @@
+@import "globals";
+
+/* Media Queries (Laptops and Desktops)
+========================================
+*/
+@media only screen and (min-width: 85em) {
+  header nav {
+    grid-template-columns: 330px 40px 2fr 100px 110px 370px;
+    column-gap: 20px;
+  }
+
+  .nav-logo {
+    width: 40px;
+    height: 40px;
+    margin-left: 25px;
+  }
+
+  header nav h1 {
+    font-size: 2.6rem;
+  }
+
+  .search-link {
+    font-size: 1.5rem;
+    margin-top: 50px;
+    grid-column-start: 4;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+  }
+
+  .link {
+    font-size: 1.5rem;
+    margin-top: 50px;
+    grid-column-start: 5;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+  }
+
+  .headlines-container {
+    max-width: 60%;
+    margin: 0 auto 0 auto;
+  }
+
+  .primary-headline a {
+    margin-top: 72px;
+    /* grid-template-rows / grid-template-columns; */
+    grid-template: 1fr 100px / 1fr;
+    row-gap: 10px;
+  }
+  
+  .primary-headline img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto 0 auto;
+    /* grid-row-start / grid-column start / grid-row-end / grid-column-end; */
+    grid-area: 1 / 1 / span 1 / span 1;
+  }
+  
+  .primary-headline h2 {
+    margin: 0 auto 0 auto;
+    font-size: 2.6rem;
+    grid-area: 2 / 1 / span 1 / span 1;
+  }
+
+  .circleContainer {
+    display: none;
+  }
+
+  .mini-headlines {
+    display: flex;
+    list-style: none;
+    column-gap: 8px;
+    max-width: 95%;
+    border-radius: 15px;
+    margin: 80px auto 0 auto;
+    margin: 30px auto 50px auto;
+    padding: 0.2rem;
+    justify-content: center;
+  }
+  
+  .mini-headlines img {
+    border-radius: 5px;
+    margin-top: 0;
+    min-height: 50px;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .currentlySelected {
+    border: 8px inset $standout-clr;
+  }
+
+  .mini-headlines img:hover {
+    border: 6px solid $standout-clr;
+  }
+
+  .main-cards-board {
+    width: 70%;
+  }
+
+  .cards {
+    display: grid;
+    grid: auto-flow / repeat(3, 1fr);
+    column-gap: 50px;
+    margin: 40px auto 0 auto;
+  }
+
+  .cards li {
+    border-bottom: solid 5px $secondary-clr;
+  }
+
+  .cards li h2 {
+    font-size: 2rem;
+  }
+
+  .cards li h3 {
+    font-size: 1.6rem;
+  }
+
+  .cards li p {
+    font-size: 1.3rem;
+  }
+
+  .card li {
+    max-width: 1200px;
+  }
+
+  .card li h2 {
+    font-size: 2.5rem;
+  }
+  .card li h3 {
+    font-size: 1.8rem;
+  }
+
+  .card li p {
+    font-size: 1.35rem;
+  }
+
+  .primary-headline img {
+    width: 100%;
+  }
+  
+}

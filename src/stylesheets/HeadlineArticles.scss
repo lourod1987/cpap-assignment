@@ -4,9 +4,7 @@
 ============================
 */
 .headlines-container {
-  // background-color: $primary-clr;
   background-color: $bg-clr;
-  // background-color: #FFFFFF;
   padding-bottom: 15px;
 }
 
@@ -15,9 +13,7 @@
   /* grid-template-rows / grid-template-columns; */
   grid-template: 1fr 20px / 1fr;
   row-gap: 10px;
-  // column-gap: 10px;
   height: auto;
-  /* max-height: 700px; */
   text-decoration: none;
   margin-bottom: 0;
 }
@@ -25,12 +21,8 @@
 .primary-headline img {
   margin-top: 71px;
   width: 100%;
-  // max-width: 90%;
   height: auto;
-  /* min-height: 420px; */
-  /* grid-row-start / grid-column start / grid-row-end / grid-column-end; */
   grid-area: 1 / 2 / span 1 / span 1;
-  // justify-self: center;
 }
 
 .primary-headline h2 {
@@ -39,8 +31,6 @@
   font-size: 1.32rem;
   grid-area: 2 / 2 / span 1 / span 1;
   text-align: center;
-  // justify-self: center;
-  /* vertical-align: top; */
 }
 
 .mini-headlines {

@@ -1,0 +1,110 @@
+@import "globals";
+
+/* Media Queries (Tablets)
+============================
+*/
+@media only screen and (min-width: 48em) and (max-width: 85em) {
+  header nav {
+    grid-template-columns: 40px 36px 2fr 100px 100px 40px;
+    grid-template-rows: 1fr;
+  }
+
+  .nav-logo {
+    width: 36px;
+    height: 36px;
+  }
+  
+  header nav h1 {
+    align-content: flex-start;
+    font-size: 2.6rem;
+  }
+
+  .search-link {
+    margin-top: 50px;
+    font-size: 1.4rem;
+    grid-column-start: 4;
+    grid-column-end: span 1;
+  }
+
+  .link {
+    margin-top: 50px;
+    font-size: 1.4rem;
+    grid-column-start: 5;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+  }
+
+  .primary-headline h2 {
+    font-size: 1.8rem;
+  }
+
+  .currentlySelected {
+    border: 7px inset $standout-clr;
+  }
+
+  .circleContainer {
+    display: none;
+  }
+  
+  .mini-headlines {
+    display: flex;
+    list-style: none;
+    column-gap: 8px;
+    max-width: 95%;
+    border-radius: 15px;
+    margin: 80px auto 0 auto;
+    padding: 0.2rem;
+    justify-content: center;
+  }
+  
+  .mini-headlines img {
+    border-radius: 5px;
+    margin-top: 0;
+    min-height: 50px;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  .currentlySelected {
+    border: 4px inset $standout-clr;
+  }
+  
+  .mini-headlines img:hover {
+    border: 6px solid $standout-clr;
+  }
+  
+  .mini-headlines img:focus {
+    border: 5px solid $standout-clr;
+  }
+
+  .cards {
+    display: grid;
+    grid: auto-flow / repeat(2, 1fr);
+    width: 100%;
+  }
+
+  .cards li {
+    max-width: 90%;
+    list-style: none;
+    border-bottom: solid 3px $secondary-clr;
+    text-align: left;
+  }
+  
+  .cards li img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card li {
+    max-width: 740px;
+    padding: 0;
+    margin: 0 auto 0 auto;
+  }
+
+  .card li p {
+    font-size: 1.2rem;
+  }
+
+}
